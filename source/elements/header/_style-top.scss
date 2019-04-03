@@ -1,0 +1,33 @@
+.header_new-topline {
+	display: none;
+	background-color: $dark-violet;
+	padding: .875em;
+	font-size: .875em;
+	overflow: hidden;
+	line-height: 1.43;
+	@include max-screen($tablet) {
+		& {
+			display: block;
+		}
+	}
+	&-language {
+		float: left;
+		list-style: none;
+		color: rgba($white, 0.6);
+		li {
+			display: inline-block;
+		}
+		li + li {
+			margin-left: 14px;
+		}
+	}
+	&-support {
+		float: right;
+		font-weight: 500;
+		color: $white;
+	}
+}
+
+.header_new-top {
+	padding: .5em 1em;
+}
