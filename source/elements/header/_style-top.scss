@@ -27,6 +27,16 @@
 		color: $white;
 	}
 }
+.header_new {
+	&-rss_button {
+		max-width: 20px;
+		fill: $white;
+		img {
+			max-width: inherit;
+		}
+	}
+}
+
 
 .header_new-top {
 	padding: .5em 1em;
