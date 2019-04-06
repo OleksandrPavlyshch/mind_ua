@@ -1,13 +1,15 @@
 .header_new-topline {
-	display: none;
 	background-color: $dark-violet;
 	padding: .875em;
 	font-size: .875em;
 	overflow: hidden;
 	line-height: 1.43;
-	@include max-screen($tablet) {
+	.is-fixed & {
+		display: none;
+	}
+	@include min-screen($tablet) {
 		& {
-			display: block;
+			display: none;
 		}
 	}
 	&-language {
@@ -37,7 +39,12 @@
 	}
 }
 
-
 .header_new-top {
-	padding: .5em 1em;
+	padding: 1em;
+	background-color: $main-violet;
+	@include min-screen($tablet) {
+		& {
+			background-color: $dark-violet;
+		}
+	}
 }
