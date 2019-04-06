@@ -42,9 +42,17 @@
 .header_new-top {
 	padding: 1em;
 	background-color: $main-violet;
+	&-content {
+		max-width: $header-width;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 	@include min-screen($tablet) {
 		& {
 			background-color: $dark-violet;
+			padding: 1em 1.5em;
 		}
 	}
 }

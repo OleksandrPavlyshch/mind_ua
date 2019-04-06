@@ -30,7 +30,10 @@ $header-height-mobile: 96px;
 	&.is-fixed &-i {
 		transform: translateY(0);
 	}
-
+	&-content {
+		max-width: $header-width;
+		margin: 0 auto;
+	}
 	a {
 		color: $white;
 	}
