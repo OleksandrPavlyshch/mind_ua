@@ -5,11 +5,18 @@ var initHeader = function() {
 		var _top = parseInt($(window).height() / 2)
 			, _scroll = parseInt($(window).height() / 3);
 
-		if ($(window).scrollTop() >= _scroll ) {
+
+		if ($(window).scrollTop() >= _scroll) {
 			$header.addClass('is-scroll');
 		} else {
 			$header.removeClass('is-scroll');
 		}
+
+		if ($(window).scrollTop() >= 150 && $(window).scrollTop() <= _scroll && !$header.hasClass('is-scroll')) {
+			$( document ).trigger('isScroll');
+			console.log('isScroll')
+		}
+		// 	console.log(!$header.hasClass('is-scroll'))
 
 		if ($(window).scrollTop() >= _top) {
 			$header.addClass('is-fixed');
@@ -78,6 +85,11 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 		collapseMenuItems()
 	});
 
+	$( document ).on( 'isScroll', function() {
+		$dropdawnButton.removeClass(activeClass);
+		$dropdawn.hide();
+	});
+
 	$dropdawnButton.click(function() {
 		var act = $dropdawnButton.hasClass(activeClass);
 		if(act) {
@@ -94,6 +106,11 @@ $(function(){
 	var $topMenuDropdawn = $('.header_new-top-main_menu-dropdown');
 	var $topMenuDropdawnButton = $('.header_new-top-main_menu-dropdown_button');
 	
+	var $botMenuList = $('.header_new-bot-menu');
+	var $botMenuDropdawn = $('.header_new-bot-menu-dropdown');
+	var $botMenuDropdawnButton = $('.header_new-bot-menu-dropdown_button');
+	
 	initHeader();
+	menuCollapsToDorpdown($botMenuList, $botMenuDropdawn, $botMenuDropdawnButton);
 	menuCollapsToDorpdown($topMenuList, $topMenuDropdawn, $topMenuDropdawnButton);
 });

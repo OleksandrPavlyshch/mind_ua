@@ -295,6 +295,7 @@ $grid-space: ($grid-base / 4) !default;
 			position: absolute;
 			white-space: normal;
 			padding: 1.5em;
+			z-index: 7;
 			top: 100%;
 			left: 100%;
 			min-width: 10em;
@@ -350,7 +351,7 @@ $grid-space: ($grid-base / 4) !default;
 		}
 		&-dropdown {
 			display: none;
-			// border: 1px solid #00f;
+			z-index: 7;
 			position: absolute;
 			top: 50%;
 			left: 100%;
@@ -358,6 +359,7 @@ $grid-space: ($grid-base / 4) !default;
 			margin-left: -3em;
 			padding: 1.5em;
 			background-color: $dark-violet;
+			border-radius: 0 0 .5em .5em;
 		}
 		&-dropdown &-item {
 			padding: 0;

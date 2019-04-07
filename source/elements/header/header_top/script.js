@@ -36,6 +36,11 @@ $(function(){
 		}
 	});
 
+	$( document ).on( 'isScroll', function() {
+		$subMenuTitle.removeClass(openClass);
+		$dropdowns.hide();
+	});
+
 	$(document).mouseup(function (e) {
 		if (!$dropdowns.is(e.target) 
 			 && $dropdowns.has(e.target).length === 0) 
