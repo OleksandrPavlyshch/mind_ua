@@ -37,7 +37,9 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 	//close when click out container
 	$(document).mouseup(function (e) {
 		if (!$dropdawn.is(e.target) // if the target of the click isn't the container...
-			 && $dropdawn.has(e.target).length === 0) // ... nor a descendant of the container
+			 && $dropdawn.has(e.target).length === 0
+			 && !$dropdawnButton.is(e.target)
+			 && $dropdawnButton.has(e.target).length === 0) // ... nor a descendant of the container
 			 {
 			$dropdawnButton.removeClass(activeClass);
 			$dropdawn.hide();

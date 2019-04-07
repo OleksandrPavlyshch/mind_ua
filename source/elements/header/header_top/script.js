@@ -42,9 +42,12 @@ $(function(){
 	});
 
 	$(document).mouseup(function (e) {
-		if (!$dropdowns.is(e.target) 
-			 && $dropdowns.has(e.target).length === 0) 
+		if (!$dropdowns.is(e.target) // if the target of the click isn't the container...
+			 && $dropdowns.has(e.target).length === 0
+			 && !$subMenuTitle.is(e.target)
+			 && $subMenuTitle.has(e.target).length === 0) // ... nor a descendant of the container
 			 {
+
 			$subMenuTitle.removeClass(openClass);
 			$dropdowns.hide();
 		}

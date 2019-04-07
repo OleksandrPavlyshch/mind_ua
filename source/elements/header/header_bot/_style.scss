@@ -89,9 +89,10 @@
 	&-menu {
 		overflow: hidden;
 		text-overflow: ellipsis;
+		display: flex;
 		justify-content: space-between;
 		white-space: nowrap;
-		margin-right: 1.3em;
+		margin-right: 2em;
 		&-item {
 			color: rgba($white, .8);
 			display: inline-block;
@@ -134,12 +135,16 @@
 			display: block;
 			line-height: 1.4em;
 		}
+		&-dropdown &-item img,
+		&-dropdown &-item &-image {
+			display: none;
+		}
 		&-dropdown_button {
 			float: right;
 			display: none;
 			width: 1.5em;
 			min-width: 1.5em;
-			height: 1.3em;
+			height: 1.1em;
 			display: inline-block;
 			position: relative;
 			overflow: hidden;
@@ -161,6 +166,7 @@
 				background-color: currentColor;
 				width: .25em;
 				height: .25em;
+				margin-top: -.125em;
 				box-shadow: -.5em 0, .5em 0;
 			}
 		}
