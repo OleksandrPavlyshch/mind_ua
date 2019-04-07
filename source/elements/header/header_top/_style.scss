@@ -282,6 +282,7 @@ $grid-space: ($grid-base / 4) !default;
 			padding: 1.5em;
 			top: 100%;
 			left: 100%;
+			min-width: 10em;
 			max-width: 12em;
 			margin-left: -1.9em;
 			border-radius: .25em;
@@ -295,6 +296,9 @@ $grid-space: ($grid-base / 4) !default;
 				font-size: .8em;
 				position: relative;
 				padding-right: 1.2em;
+				&.is_open {
+					color: $white;
+				}
 				&::before {
 					@include arr(8, 6, $white, b)
 					content: '';

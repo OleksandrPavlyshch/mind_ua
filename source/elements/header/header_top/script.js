@@ -4,7 +4,10 @@ $(function(){
 		, menuShowClass = 'is-menu-show'
 		, $searchInput = $('.header_new-search-input')
 		, focusClass = 'is_focused'
-		, $searchForm = $('.header_new-search');
+		, openClass = 'is_open'
+		, $searchForm = $('.header_new-search')
+		, $subMenuTitle = $('.header_new-top-sub_menu-item-title')
+		, $dropdowns = $('.header_new-top-sub_menu-dropdown');
 
 	$menuButton.on('click', function() {
 		$menuButton.toggleClass('active');
@@ -12,12 +15,39 @@ $(function(){
 	});
 
 	$searchInput.focus(function() {
-		console.log('dd')
 		$searchForm.addClass(focusClass);
 	});
 	$searchInput.blur(function() {
 		$searchForm.removeClass(focusClass);
 	});
 
+	//Sub menu dropdawn
+
+	$subMenuTitle.click(function(e) {
+		var act = $(this).hasClass(openClass);
+
+		if(act) {
+			$subMenuTitle.removeClass(openClass);
+			$dropdowns.hide();
+		} else {
+			$dropdowns.hide();
+			$subMenuTitle.removeClass(openClass);
+			$(this).addClass(openClass).next().show();
+			// $dropdawnButton.addClass(activeClass);
+		}
+		// $dropdawn.toggle(!act);
+		console.log(e.target)
+		/* Act on the event */
+	});
+
+	$(document).mouseup(function (e) {
+		if (!$dropdowns.is(e.target) // if the target of the click isn't the container...
+			 && $dropdowns.has(e.target).length === 0) // ... nor a descendant of the container
+			 {
+			$subMenuTitle.removeClass(openClass);
+			// $dropdawnButton.removeClass(activeClass);
+			$dropdowns.hide();
+		}
+	});
 
 });

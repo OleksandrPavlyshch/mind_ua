@@ -82,7 +82,7 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 	});
 
 	$dropdawnButton.click(function() {
-		var act = $dropdawnButton.hasClass(activeClass)
+		var act = $dropdawnButton.hasClass(activeClass);
 		if(act) {
 			$dropdawnButton.removeClass(activeClass);
 		} else {
