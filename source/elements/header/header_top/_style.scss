@@ -113,6 +113,7 @@
 		color: $white;
 		cursor: pointer;
 		background: none;
+		transition: inherit;
 		border: none;
 		display: inline-block;
 		.is_focused & {
@@ -349,8 +350,9 @@ $grid-space: ($grid-base / 4) !default;
 		}
 		&-dropdown {
 			display: none;
+			// border: 1px solid #00f;
 			position: absolute;
-			top: 100%;
+			top: 50%;
 			left: 100%;
 			margin-top: 1em;
 			margin-left: -3em;
@@ -362,7 +364,7 @@ $grid-space: ($grid-base / 4) !default;
 			// font-size: .8em;
 			white-space: nowrap;
 			display: block;
-			height: 1.4em;
+			line-height: 1.4em;
 		}
 		&-dropdown_button {
 			float: right;
