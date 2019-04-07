@@ -64,9 +64,6 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 			.end()
 			.slice(0, lastItemIndex ).hide();
 
-			console.log(lastItemIndex)
-			console.log(itemsNumber)
-
 		if(lastItemIndex >= itemsNumber) {
 			$dropdawn.hide();
 			$dropdawnButton.hide();
