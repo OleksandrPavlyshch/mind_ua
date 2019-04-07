@@ -85,11 +85,14 @@
 		</div>
 		<div class="header_new-search-wrap">
 			<form class="header_new-search" action="https://mind.ua/search" method="GET" accept-charset="utf-8">
-				<input type="text" name="search-input" class="header_new-search-input" placeholder="Що ви шукаєте?">
-				<button class="header_new-search-button">
+				<input type="text" class="header_new-search-input" placeholder="Що ви шукаєте?">
+				<button type="submit" class="header_new-search-button">
 					{% include "img/search-solid.svg" %}
 				</button>
 			</form>
+			<a href="#" class="header_new-search-button header_new-search-open_modal">
+				{% include "img/search-solid.svg" %}
+			</a>
 			
 		</div>
 

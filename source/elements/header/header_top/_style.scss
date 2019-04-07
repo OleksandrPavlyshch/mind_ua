@@ -69,6 +69,62 @@
 		}
 	}
 }
+.header_new-search {
+	display: none;
+	align-items: center;
+	justify-content: flex-end;
+	// border: 1px solid #fff;
+	float: right;
+	min-height: 1.125em;
+	padding: .5em .8em .5em 1em;
+	border-radius: 1em;
+	background-color: $main-violet;
+	transition: all .3s ease;
+	width: 160px;
+	&.is_focused {
+		background-color: $white;
+		width: 100%;
+	}
+	&-input {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		font-size: .8em;
+		color: rgba(153, 153, 153, 0.6);
+		margin-right: .5em;
+		flex: 1;
+		max-width: calc(100% - 1.625em);
+		// width: 85px;
+	}
+	@include min-screen($tablet) {
+		display: flex;
+		&-open_modal {
+			display: none;
+		}
+	}
+	&-button {
+		min-width: 1.125em;
+		width: 1.125em;
+		height: 1.125em;
+		font-size: 1em;
+		padding: 0;
+		color: $white;
+		cursor: pointer;
+		background: none;
+		border: none;
+		display: inline-block;
+		.is_focused & {
+			color: rgba(153, 153, 153, 0.6);
+		}
+	}
+
+	&-wrap {
+		margin-left: 1em;
+		@include min-screen($tablet) {
+			min-width: 250px;
+		}
+	}
+}
 
 
 $grid-base: .25em;
