@@ -33,19 +33,14 @@ $(function(){
 			$dropdowns.hide();
 			$subMenuTitle.removeClass(openClass);
 			$(this).addClass(openClass).next().show();
-			// $dropdawnButton.addClass(activeClass);
 		}
-		// $dropdawn.toggle(!act);
-		console.log(e.target)
-		/* Act on the event */
 	});
 
 	$(document).mouseup(function (e) {
-		if (!$dropdowns.is(e.target) // if the target of the click isn't the container...
-			 && $dropdowns.has(e.target).length === 0) // ... nor a descendant of the container
+		if (!$dropdowns.is(e.target) 
+			 && $dropdowns.has(e.target).length === 0) 
 			 {
 			$subMenuTitle.removeClass(openClass);
-			// $dropdawnButton.removeClass(activeClass);
 			$dropdowns.hide();
 		}
 	});
