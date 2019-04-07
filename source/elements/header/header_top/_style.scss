@@ -240,6 +240,7 @@ $grid-space: ($grid-base / 4) !default;
 .header_new-top {
 	&-main_menu,
 	&-sub_menu {
+		display: none;
 		position: relative;
 		min-height: 2em;
 		line-height: 2em;
@@ -247,6 +248,13 @@ $grid-space: ($grid-base / 4) !default;
 		padding-left: 1.5em;
 		margin-left: 1.5em;
 		transition: all .3s ease;
+
+		@include min-screen($tablet) {
+			& {
+				display: block;
+			}
+		}
+
 		&-item {
 			color: rgba($white, .6);
 			display: inline-block;
@@ -270,13 +278,14 @@ $grid-space: ($grid-base / 4) !default;
 	}
 	&-main_menu {
 		padding-left: 2em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		flex: 1;
 		max-width: calc(100% - 39em);
 		&-list {
+			display: flex;
+			justify-content: space-between;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			margin-right: 1.3em;
 		}
 		&-dropdown {
 			display: none;
@@ -286,7 +295,6 @@ $grid-space: ($grid-base / 4) !default;
 			margin-top: 1em;
 			margin-left: -3em;
 			padding: 1.5em;
-			// font-size: .8em;
 			background-color: $dark-violet;
 		}
 		&-dropdown &-item {
@@ -296,11 +304,12 @@ $grid-space: ($grid-base / 4) !default;
 			height: 1.4em;
 		}
 		&-dropdown_button {
+			float: right;
 			display: none;
 			margin-left: .8em;
 			width: 1.5em;
 			min-width: 1.5em;
-			height: 1.5em;
+			height: 2em;
 			display: inline-block;
 			position: relative;
 			overflow: hidden;
