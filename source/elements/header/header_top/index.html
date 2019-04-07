@@ -19,7 +19,7 @@
 		<div class="header_new-menu_button">
 		</div>
 		<a href="#" class="header_new-rss_button">
-			<img src="./img/rss-solid.svg" alt="">
+			{% include "img/rss-solid.svg" %}
 		</a>
 		<a href="#" class="header_new-top-logo">
 			<img src="./img/logo.svg" alt="mind.ua">
@@ -83,14 +83,18 @@
 				</li>
 			</ul>
 		</div>
-
-		<div class="header_new-search">
-			<input type="text" name="search-input" class="header_new-search-input">
-			<span class="icon-search"></span>
+		<div class="header_new-search-wrap">
+			<form class="header_new-search" action="https://mind.ua/search" method="GET" accept-charset="utf-8">
+				<input type="text" name="search-input" class="header_new-search-input" placeholder="Що ви шукаєте?">
+				<button class="header_new-search-button">
+					{% include "img/search-solid.svg" %}
+				</button>
+			</form>
+			
 		</div>
-		
+
 		<div class="header_new-login_button">
-			<span class="icon-user"></span>
+			{% include "img/user-solid.svg" %}
 		</div>
 	</div>
 </div>

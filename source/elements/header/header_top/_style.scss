@@ -30,12 +30,25 @@
 	}
 }
 .header_new {
+	&-rss_button,
+	&-login_button {
+		color: $white;
+		fill: $white;
+		transition: all .3s ease;
+		box-sizing: border-box;
+		text-align: center;
+		cursor: pointer;
+		&:hover {
+			color: $pink;
+		}
+	}
+
 	&-rss_button {
 		display: none;
-		width: .8em;
-		fill: $white;
+		width: 1.5em;
 		margin-right: 1.5em;
-		img {
+		img,
+		svg {
 			width: inherit;
 		}
 		@include min-screen($tablet) {
@@ -44,14 +57,25 @@
 			}
 		}
 	}
+	&-login_button {
+		width: 2em;
+		min-width: 2em;
+		height: 2em;
+		padding-top: .5em;
+		font-size: 1em;
+		margin-left: 1.25em;
+		svg {
+			width: 1em;
+		}
+	}
 }
 
 
 $grid-base: .25em;
-$grid-space: ($grid-base / 3) !default;
+$grid-space: ($grid-base / 4) !default;
 .header_new-menu_button {
 	font-size: 1.5em;
-	margin-right: 2em;
+	margin-right: 1.5em;
 	border: none;
 	outline: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -114,11 +138,11 @@ $grid-space: ($grid-base / 3) !default;
 		transform: rotate3d(0, 0, 1, -45deg) scale3d(.8, .8, .8);
 		box-shadow: 
 			0 -($grid-base + $grid-space) 0 -($grid-base + $grid-space),
-			-$grid-space 0 -($grid-base + $grid-space),
-			($grid-base - $grid-space) 0 -($grid-base + $grid-space),
-			0 -($grid-base + $grid-space) 0 -$grid-space,
+			-($grid-space * 1.1) 0 -($grid-base + $grid-space),
+			($grid-base - $grid-space * 1.2) 0 -($grid-base + $grid-space),
+			0 -($grid-base + $grid-space) 0 -($grid-space * 1.1),
 			0 0 transparent,
-			0 -($grid-base + $grid-space) ($grid-base - $grid-space),
+			0 -($grid-base + $grid-space) ($grid-base - $grid-space * 1.2),
 			0 0 transparent,
 			0 0 transparent;
 	}
@@ -134,6 +158,8 @@ $grid-space: ($grid-base / 3) !default;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
+		justify-content: center;
 	}
 	@include min-screen($tablet) {
 		& {
