@@ -19,7 +19,7 @@
         <div class="header_new-i">
           <div class="header_new-topline">
             <ul class="header_new-topline-language">
-              <li>
+              <li class="active">
                 <a href="#">укр</a>
               </li>
               <li>
@@ -33,13 +33,15 @@
           </div>
           <div class="header_new-top">
             <div class="header_new-top-content">
-              <div class="header_new-menu_button">
+              <div class="header_new-top-content-left">
+                <div class="header_new-menu_button">
+                </div>
+                <a href="#" class="header_new-rss_button">
+                  <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path>
+                  </svg>
+                </a>
               </div>
-              <a href="#" class="header_new-rss_button">
-                <svg aria-hidden="true" focusable="false" \ role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path>
-                </svg>
-              </a>
               <a href="#" class="header_new-top-logo">
                 <img src="./img/logo.svg" alt="mind.ua">
               </a>
@@ -102,33 +104,131 @@
                   </li>
                 </ul>
               </div>
-              <div class="header_new-search-wrap">
-                <form class="header_new-search" action="https://mind.ua/search" method="GET" accept-charset="utf-8">
-                  <input type="text" class="header_new-search-input" placeholder="Що ви шукаєте?">
-                  <button type="submit" class="header_new-search-button">
+              <div class="header_new-top-content-right">
+                <div class="header_new-search-wrap">
+                  <form class="header_new-search" action="https://mind.ua/search" method="GET" accept-charset="utf-8">
+                    <input type="text" class="header_new-search-input" placeholder="Що ви шукаєте?">
+                    <button type="submit" class="header_new-search-button">
+                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                      </svg>
+                    </button>
+                  </form>
+                  <a href="#" class="header_new-search-button is_open_modal">
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                       <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
                     </svg>
-                  </button>
-                </form>
-                <a href="#" class="header_new-search-button header_new-search-open_modal">
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                  </a>
+                </div>
+                <div class="header_new-login_button">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
                   </svg>
-                </a>
-              </div>
-              <div class="header_new-login_button">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
-                </svg>
+                </div>
               </div>
             </div>
           </div>
-          <a href="#" class="header_new-top-logo">
-            <img src="./img/logo.svg" alt="mind.ua">
-          </a>
+          <div class="header_new-bot">
+            <a href="#" class="header_new-bot-logo">
+              <img src="./img/logo.svg" alt="mind.ua">
+            </a>
+            <div class="header_new-bot-middle">
+              <div class="header_new-bot-middle-top">
+                <ul class="header_new-bot-language">
+                  <li class="active">
+                    <a href="#">укр</a>
+                  </li>
+                  <li>
+                    <a href="#">рус</a>
+                  </li>
+                  <li>
+                    <a href="#">eng</a>
+                  </li>
+                </ul>
+                <ul class="header_new-bot-social">
+                  <li class="header_new-bot-social-item">
+                    <a href="" class="header_new-bot-social-link" title="Facebook">
+                      <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor" d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header_new-bot-social-item">
+                    <a href="#" class="header_new-bot-social-link" title="Twitter">
+                      <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header_new-bot-social-item">
+                    <a href="#" class="header_new-bot-social-link" title="Telegram">
+                      <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header_new-bot-social-item">
+                    <a href="#" class="header_new-bot-social-link" title="YouTube">
+                      <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header_new-bot-middle-bot">
+                <ul class="header_new-bot-menu">
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Бизнес</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">
+                      <img class="header_new-bot-menu-image" src="./img/94.png" alt="Энергетика"> Энергетика </a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">
+                      <img src="./img/94.png" alt="Энергетика"> Страхование </a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Банки</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Образование</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Недвижимость</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Финансы</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Технологии</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Бизнес</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Энергетика</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Страхование</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Банки</a>
+                  </li>
+                  <li class="header_new-bot-menu-item">
+                    <a href="#" class="header_new-bot-menu-link">Образование</a>
+                  </li>
+                </ul>
+                <div class="header_new-bot-menu-dropdown_button">...</div>
+                <ul class="header_new-bot-menu-dropdown">
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="header_new-bot-support">Поддержать проект</a>
+          </div>
         </div>
-        <h1>New header</h1>
+        <!-- <h1>New header</h1> -->
       </div>
       <div style="height: 300vh;"></div>
     </main>
