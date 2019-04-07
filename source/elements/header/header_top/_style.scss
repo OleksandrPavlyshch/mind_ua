@@ -267,19 +267,61 @@ $grid-space: ($grid-base / 4) !default;
 			}
 		}
 		&-list {
-			font-size: .8em;
 			white-space: nowrap;
+		}
+		&-link {
+			font-size: .8em;
+
 		}
 	}
 	&-sub_menu {
 		&-dropdown {
 			display: none;
+			position: absolute;
+			white-space: normal;
+			padding: 1.5em;
+			top: 100%;
+			left: 100%;
+			max-width: 12em;
+			margin-left: -1.9em;
+			border-radius: .25em;
+			background-color: $white;
+			box-shadow: 0 0 49px 0 rgba($black, 0.15);
+		}
+		&-item {
+			position: relative;
+			&-title {
+				cursor: pointer;
+				font-size: .8em;
+				position: relative;
+				padding-right: 1.2em;
+				&::before {
+					@include arr(8, 6, $white, b)
+					content: '';
+					position: absolute;
+					right: .125em;
+					top: 50%;
+					margin-top: -3px;
+				}
+			}
+		}
+		&-link {
+			display: block;
+			line-height: 1.6;
+			color: $black;
+			opacity: .6;
+			& + & {
+				margin-top: .4em;
+			}
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 	&-main_menu {
 		padding-left: 2em;
 		flex: 1;
-		max-width: calc(100% - 39em);
+		max-width: calc(100% - 41em);
 		&-list {
 			display: flex;
 			justify-content: space-between;
