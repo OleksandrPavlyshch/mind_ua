@@ -4,7 +4,7 @@
 	font-size: .875em;
 	overflow: hidden;
 	line-height: 1.43;
-	.is-fixed & {
+	.is-scroll & {
 		display: none;
 	}
 	@include min-screen($tablet) {
@@ -15,9 +15,15 @@
 	&-language {
 		float: left;
 		list-style: none;
-		color: rgba($white, 0.6);
+		a {
+			color: inherit;
+		}
 		li {
 			display: inline-block;
+			color: rgba($white, 0.6);
+			&.active {
+				color: $white;
+			}
 		}
 		li + li {
 			margin-left: 14px;
@@ -45,9 +51,7 @@
 
 	&-rss_button {
 		display: none;
-		width: 1.5em;
-		// margin-right: auto;
-		// margin-right: 1.5em;
+		width: 1.3em;
 		img,
 		svg {
 			width: inherit;
@@ -99,9 +103,6 @@
 	}
 	@include min-screen($tablet) {
 		display: flex;
-		&-open_modal {
-			display: none;
-		}
 	}
 	&-button {
 		min-width: 1.125em;
@@ -117,10 +118,15 @@
 		.is_focused & {
 			color: rgba(153, 153, 153, 0.6);
 		}
+		&.is_open_modal {
+			padding-top: 0.3em;
+			@include min-screen($tablet) {
+				display: none;
+			}
+		}
 	}
-
 	&-wrap {
-		// margin-left: 1em;
+		margin-left: 1em;
 		margin-left: auto;
 		@include min-screen($tablet) {
 			min-width: 250px;
@@ -215,9 +221,15 @@ $grid-space: ($grid-base / 4) !default;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: row;
-		// justify-content: space-between;
+		justify-content: space-between;
 		align-items: center;
 		// justify-content: center;
+		&-left,
+		&-right {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 	@include min-screen($tablet) {
 		& {
@@ -227,15 +239,17 @@ $grid-space: ($grid-base / 4) !default;
 	}
 
 	&-logo {
-		max-height: 34px;
+		display: inline-block;
 		@include min-screen($tablet) {
 			& {
 				display: none;
 			}
 		}
+		img {
+			max-height: 34px;
+		}
 	}
 }
-
 
 .header_new-top {
 	&-main_menu,
@@ -345,8 +359,9 @@ $grid-space: ($grid-base / 4) !default;
 		}
 		&-dropdown &-item {
 			padding: 0;
-			font-size: .8em;
+			// font-size: .8em;
 			white-space: nowrap;
+			display: block;
 			height: 1.4em;
 		}
 		&-dropdown_button {
