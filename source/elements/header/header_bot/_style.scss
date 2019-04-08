@@ -36,7 +36,6 @@
 		color: $white;
 		&-item {
 			display: inline-block;
-			// width: .8em;
 			vertical-align: middle;
 			& + & {
 				margin-left: 1.2em;
@@ -46,7 +45,6 @@
 			display: inline-block;
 			color: inherit;
 			min-width: 1em;
-			// height: 1em;
 			&:hover {
 				color: $pink;
 			}
@@ -92,7 +90,7 @@
 		display: flex;
 		justify-content: space-between;
 		white-space: nowrap;
-		margin-right: 2em;
+		// margin-right: 2em;
 		&-item {
 			color: rgba($white, .8);
 			display: inline-block;
@@ -144,6 +142,7 @@
 			display: none;
 			width: 1.5em;
 			min-width: 1.5em;
+			margin-left: 2em;
 			height: 1.1em;
 			display: inline-block;
 			position: relative;

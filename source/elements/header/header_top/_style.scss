@@ -94,7 +94,7 @@
 		border: none;
 		outline: none;
 		font-size: .8em;
-		color: rgba(153, 153, 153, 0.6);
+		color: rgba($nobel, 0.6);
 		margin-right: .5em;
 		flex: 1;
 		overflow: hidden;
@@ -117,7 +117,7 @@
 		border: none;
 		display: inline-block;
 		.is_focused & {
-			color: rgba(153, 153, 153, 0.6);
+			color: rgba($nobel, 0.6);
 		}
 		&.is_open_modal {
 			padding-top: 0.3em;
@@ -261,7 +261,7 @@ $grid-space: ($grid-base / 4) !default;
 		line-height: 2em;
 		border-left: 1px solid rgba($white, .15);
 		padding-left: 1.5em;
-		margin-left: 1.5em;
+		margin-left: 1.1em;
 		transition: all .3s ease;
 
 		@include min-screen($tablet) {
@@ -341,13 +341,13 @@ $grid-space: ($grid-base / 4) !default;
 	&-main_menu {
 		padding-left: 2em;
 		flex: 1;
-		max-width: calc(100% - 41em);
+		max-width: calc(100% - 42em);
 		&-list {
 			display: flex;
 			justify-content: space-between;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			margin-right: 1.3em;
+			// margin-right: 1.3em;
 		}
 		&-dropdown {
 			display: none;
@@ -371,7 +371,7 @@ $grid-space: ($grid-base / 4) !default;
 		&-dropdown_button {
 			float: right;
 			display: none;
-			margin-left: .8em;
+			margin-left: 1.3em;
 			width: 1.5em;
 			min-width: 1.5em;
 			height: 2em;
