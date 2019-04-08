@@ -31,25 +31,6 @@
 		max-width: 7em;
 		margin-right: 1.6em;
 	}
-	&-social {
-		list-style: none;
-		color: $white;
-		&-item {
-			display: inline-block;
-			vertical-align: middle;
-			& + & {
-				margin-left: 1.2em;
-			}
-		}
-		&-link {
-			display: inline-block;
-			color: inherit;
-			min-width: 1em;
-			&:hover {
-				color: $pink;
-			}
-		}
-	}
 	&-language {
 		float: left;
 		list-style: none;

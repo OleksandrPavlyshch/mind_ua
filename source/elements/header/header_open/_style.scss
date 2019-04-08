@@ -1,0 +1,82 @@
+.header_new-open {
+	position: fixed;
+	top: 113px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	background-color: $main-violet;
+	transition: all .3s ease;
+	padding: 1.5em .8em;
+	overflow: auto;
+	.is-scroll & {
+		top: 69px;
+	}
+	@include min-screen($tablet) {
+		& {
+			top: 0 !important;
+		}
+	}
+	&-list {
+		list-style: none;
+		color: $white;
+		font-size: 1em;
+		line-height: 1.4;
+		display: flex;
+		// display: none;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-bottom: 3em;
+	}
+	&-item {
+		flex: 1;
+		margin-bottom: .5em;
+		width: 100%;
+		min-width: 100%;
+		.is_two_colums & {
+			width: 50%;
+			min-width: 50%;
+			padding-right: 1em;
+		}
+	}
+	&-link {
+		color: inherit;
+		white-space: nowrap;
+		overflow: hidden;
+		display: block;
+		text-overflow: ellipsis;
+	}
+	&-topline &-item {
+		min-width: 50%;
+	}
+	&-topline &-list {
+		display: flex;
+	}
+	&-bot &-list {
+		padding-top: 1.5em;
+		display: none;
+	}
+	&-section {
+		&_header {
+			padding: 1em 0;
+			border-top: 3px solid $white;
+			border-bottom: 1px solid rgba($white, .2);
+			position: relative;
+			font-weight: 700;
+			color: rgba($white, 0.3);
+			font-size: .9em;
+			&::before {
+				content: '';
+				position: absolute;
+				right: .5em;
+				top: 50%;
+				margin-top: -3px;
+				@include arr(8, 6, $white, b)
+			}
+		}
+	}
+	.header_new-social {
+		padding: 3em 0;
+		text-align: center;
+	}
+}

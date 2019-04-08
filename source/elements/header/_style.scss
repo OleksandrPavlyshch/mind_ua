@@ -23,12 +23,36 @@ $header-height-mobile: 96px;
 			}
 		}
 	}
+	&-social {
+		list-style: none;
+		color: $white;
+		&-item {
+			display: inline-block;
+			vertical-align: middle;
+			& + & {
+				margin-left: 1.2em;
+			}
+		}
+		&-link {
+			display: inline-block;
+			color: inherit;
+			min-width: 1em;
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
 	&.is-scroll &-i {
 			top: 0;
 			position: fixed;
 		}
 	&.is-fixed &-i {
 		transform: translateY(0);
+	}
+	.is-menu-show &-i {
+		top: 0;
+		transform: translateY(0);
+		position: fixed;
 	}
 	&-content {
 		max-width: $header-width;
