@@ -13,9 +13,9 @@
 	padding: 1.5em .8em;
 	overflow: auto;
 	transition: all .3s ease;
-	// visibility: hidden;
-	// opacity: 0;
-	// transform: translateY(-2em);
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(-2em);
 	.is-menu-show &{
 		transform: translateY(0);
 		opacity: 1;
@@ -182,7 +182,7 @@
 		justify-content: space-between;
 		min-width: 21em;
 		height: 3em;
-		padding: .5em 1em;
+		padding: .5em 1.5em;
 		border-radius: 1.5em;
 		background-color: $main-violet;
 		transition: all .3s ease;
