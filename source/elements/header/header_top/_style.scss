@@ -9,7 +9,11 @@
 		overflow: hidden;
 		height: 0;
 		padding: 0;
-		// display: none;
+	}
+	.is-menu-show & {
+		padding: .875em;
+		height: auto;
+		visibility: visible;
 	}
 	@include min-screen($tablet) {
 		& {

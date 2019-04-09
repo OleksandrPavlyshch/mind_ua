@@ -9,8 +9,14 @@
 	transition: all .3s ease;
 	padding: 1.5em .8em;
 	overflow: auto;
-	.is-scroll & {
-		top: 69px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s ease;
+	transform: translateY(-2em);
+	.is-menu-show &{
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
 	}
 	@include min-screen($tablet) {
 		& {
@@ -21,21 +27,56 @@
 		list-style: none;
 		color: $white;
 		font-size: 1em;
-		line-height: 1.4;
-		display: flex;
-		// display: none;
+		box-sizing: border-box;
+		display: block;
+		overflow: hidden;
+		display: none;
 		flex-direction: row;
 		flex-wrap: wrap;
-		padding-bottom: 3em;
+		padding-bottom: 2em;
 	}
 	&-item {
 		flex: 1;
-		margin-bottom: .5em;
-		width: 100%;
-		min-width: 100%;
+		margin-bottom: 0.85em;
+		line-height: 1.6em;
+		img,
+		svg {
+			max-width: 1.5em;
+			max-height: 1.5em;
+			vertical-align: middle;
+			margin-right: .5em;
+		}
+		&.is_big_item {
+			margin-bottom: 1.5em;
+			// padding-top: .21m;
+			padding-bottom: 1em;
+			border-bottom: 1px solid rgba($white, .2);
+		}
+		&-image {
+			float: left;
+			margin-right: 0.7em;
+			img,
+			svg {
+				max-height: 3em;
+				max-width: 3.1em;
+				width: 3.1em;
+			}
+		}
+		&-text-top,
+		&-text-bot {
+			display: block;
+		}
+		&-text-top {
+			font-size: 1.2em;
+		}
+		&-text-bot {
+			font-size: .8em;
+			color: rgba($white, .5);
+		}
 		.is_two_colums & {
 			width: 50%;
-			min-width: 50%;
+			max-width: 50%;
+			float: left;
 			padding-right: 1em;
 		}
 	}
@@ -48,17 +89,18 @@
 	}
 	&-topline &-item {
 		min-width: 50%;
+		padding-right: .5em;
 	}
 	&-topline &-list {
 		display: flex;
 	}
 	&-bot &-list {
 		padding-top: 1.5em;
-		display: none;
+		// display: none;
 	}
 	&-section {
 		&_header {
-			padding: 1em 0;
+			padding: 1em 0 1.1em;
 			border-top: 3px solid $white;
 			border-bottom: 1px solid rgba($white, .2);
 			position: relative;
@@ -66,12 +108,16 @@
 			color: rgba($white, 0.3);
 			font-size: .9em;
 			&::before {
+				@include arr(8, 6, $white, b);
 				content: '';
 				position: absolute;
 				right: .5em;
 				top: 50%;
 				margin-top: -3px;
-				@include arr(8, 6, $white, b)
+				transition: all .4s linear;
+			}
+			&.is_open::before{
+				transform: rotateX(180deg);
 			}
 		}
 	}
