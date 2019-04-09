@@ -59,7 +59,7 @@
 
 	&-rss_button {
 		display: none;
-		width: 1.3em;
+		width: 0.8em;
 		img,
 		svg {
 			width: inherit;
@@ -147,77 +147,27 @@
 $grid-base: .25em;
 $grid-space: ($grid-base / 4) !default;
 .header_new-menu_button {
-	font-size: 1.5em;
+	font-size: 1em;
 	margin-right: 1.5em;
 	border: none;
 	outline: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-tap-highlight-color: transparent;
 	cursor: pointer;
-	width: 1em;
-	height: 1em;
+	// width: 1em;
+	// height: 1em;
 	background: none;
 	position: relative;
 	vertical-align: middle;
 	transition: all .3s ease;
 	color: currentColor;
+	svg,
+	img {
+		vertical-align: middle;
+		width: 1.2em;
+	}
 	&:hover {
 		color: $pink;
-	}
-	&.active { 
-		border-color: currentColor;
-	}
-	&::after {
-		content: '';
-		position: absolute;
-		background-color: currentColor;
-		transition: inherit;
-		opacity: 0;
-		left: $grid-base*.7;
-		top: 50%;
-		width: $grid-base;
-		margin-top: -$grid-base/2;
-		height: $grid-base;
-	}
-	&.active::after {
-		width: calc(100% - #{$grid-base*1.5});
-		font-size: .8em;
-		opacity: 1;
-	}
-	&::before {
-		transition: inherit;
-		border-radius: 50%;
-		content: '';
-		position: absolute;
-		background-color: currentColor;
-		color: currentColor;
-		width: $grid-base;
-		height: $grid-base;
-		top: calc(50% - #{$grid-base} / 2);
-		left: calc(50% - #{$grid-base} / 2);
-		box-shadow: 
-			0 -($grid-base + $grid-space) 0 -($grid-base + $grid-space),
-			0 0 -($grid-base + $grid-space),
-			($grid-base + $grid-space) 0 -($grid-base + $grid-space),
-			0 -($grid-base + $grid-space) 0,
-			($grid-base + $grid-space) 0,
-			0 -($grid-base + $grid-space) ($grid-base + $grid-space),
-			0 ($grid-base + $grid-space),
-			($grid-base + $grid-space) ($grid-base + $grid-space);
-	}
-	&.active::before {
-		border-radius: 0;
-		background-color: transparent;
-		transform: rotate3d(0, 0, 1, -45deg) scale3d(.8, .8, .8);
-		box-shadow: 
-			0 -($grid-base + $grid-space) 0 -($grid-base + $grid-space),
-			-($grid-space * 1.1) 0 -($grid-base + $grid-space),
-			($grid-base - $grid-space * 1.2) 0 -($grid-base + $grid-space),
-			0 -($grid-base + $grid-space) 0 -($grid-space * 1.1),
-			0 0 transparent,
-			0 -($grid-base + $grid-space) ($grid-base - $grid-space * 1.2),
-			0 0 transparent,
-			0 0 transparent;
 	}
 }
 
