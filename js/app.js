@@ -14,9 +14,7 @@ var initHeader = function() {
 
 		if ($(window).scrollTop() >= 150 && $(window).scrollTop() <= _scroll && !$header.hasClass('is-scroll')) {
 			$( document ).trigger('isScroll');
-			console.log('isScroll')
 		}
-		// 	console.log(!$header.hasClass('is-scroll'))
 
 		if ($(window).scrollTop() >= _top) {
 			$header.addClass('is-fixed');
@@ -116,10 +114,17 @@ $(function(){
 	menuCollapsToDorpdown($botMenuList, $botMenuDropdawn, $botMenuDropdawnButton);
 	menuCollapsToDorpdown($topMenuList, $topMenuDropdawn, $topMenuDropdawnButton);
 });
+
 $(function(){
+	var $body = $('body')
+		, $menuButton = $('.header_new-menu_button');
 	$('.header_new-open-section_header').click(function(event) {
 		$(this).toggleClass('is_open')
 		.next('.header_new-open-list').slideToggle();
+	});
+	$('.header_new-open-button_close').on('click', function() {
+		$menuButton.removeClass('active');
+		$body.removeClass('is-menu-show');
 	});
 });
 $(function(){
