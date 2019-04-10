@@ -205,6 +205,24 @@
 			}
 		}
 	}
+	&-bot &-section &-list{
+		@include min-screen($tablet) {
+			& {
+				height: calc(100% - 4em);
+				padding-top: 0;
+				padding-bottom: .5em;
+				margin-top: 1.5em;
+				border-right: 1px solid rgba($white, .2);
+			}
+		}
+	}
+	&-bot &-section:last-child &-list {
+		@include min-screen($tablet) {
+			& {
+				border-right: none;
+			}
+		}
+	}
 	&-bot &-link {
 		white-space: normal;
 	}
