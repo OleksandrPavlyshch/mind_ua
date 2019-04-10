@@ -14,9 +14,7 @@ var initHeader = function() {
 
 		if ($(window).scrollTop() >= 150 && $(window).scrollTop() <= _scroll && !$header.hasClass('is-scroll')) {
 			$( document ).trigger('isScroll');
-			console.log('isScroll')
 		}
-		// 	console.log(!$header.hasClass('is-scroll'))
 
 		if ($(window).scrollTop() >= _top) {
 			$header.addClass('is-fixed');

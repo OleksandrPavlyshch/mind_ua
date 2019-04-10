@@ -88,7 +88,7 @@
 	border-radius: 1em;
 	background-color: $main-violet;
 	transition: all .3s ease;
-	width: 160px;
+	width: 8.5em;
 	&.is_focused {
 		background-color: $white;
 		width: 100%;
@@ -144,9 +144,6 @@
 	}
 }
 
-
-$grid-base: .25em;
-$grid-space: ($grid-base / 4) !default;
 .header_new-menu_button {
 	font-size: 1em;
 	margin-right: 1.5em;
@@ -175,7 +172,21 @@ $grid-space: ($grid-base / 4) !default;
 		display: none;
 		.is-menu-show & {
 			display: inline;
+			@include min-screen($tablet) {
+				& {
+					display: none;
+				}
+			}
 		}
+	}
+	&-arrow {
+		display: none;
+		@include min-screen($tablet) {
+			.is-menu-show & {
+				display: inline;
+			}
+		}
+		
 	}
 	&:hover {
 		color: $pink;
@@ -230,7 +241,7 @@ $grid-space: ($grid-base / 4) !default;
 		line-height: 2em;
 		border-left: 1px solid rgba($white, .15);
 		padding-left: 1.5em;
-		margin-left: 1.1em;
+		// margin-left: 0.3em;
 		transition: all .3s ease;
 
 		@include min-screen($tablet) {

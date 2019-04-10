@@ -94,9 +94,53 @@
 	&-topline &-item {
 		min-width: 50%;
 		padding-right: .5em;
+		@include min-screen($tablet) {
+			& {
+				min-width: auto;
+			}
+		}
+	}
+	&-button_close {
+		display: none;
+		@include min-screen($tablet) {
+			& {
+				display: inline-block;
+				img,
+				svg {
+					width: 1em;
+				}
+			}
+		}
+	}
+	&-topline {
+		display: flex;
+		align-items: flex-start;
+		@include min-screen($tablet) {
+			& {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
 	}
 	&-topline &-list {
 		display: flex;
+		@include min-screen($tablet) {
+			& {
+				flex-direction: row;
+				flex: 1;
+				padding: 0 1em;
+				white-space: nowrap;
+				justify-content: space-around;
+			}
+		}
+	}
+	&-topline &-item {
+		@include min-screen($tablet) {
+			& {
+					padding: 0 .2em;
+					flex: none;
+			}
+		}
 	}
 	&-bot &-list {
 		padding-top: 1.5em;
@@ -208,7 +252,6 @@
 		&-button {
 			min-width: 1.125em;
 			width: 1.125em;
-			// height: 1.125em;
 			height: 2em;
 			font-size: 1em;
 			padding: 0;
