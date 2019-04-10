@@ -1101,6 +1101,16 @@
   .header_new-open-bot .header_new-open-section + .header_new-open-section {
     margin-left: 2.25em;
   }
+  .header_new-open-bot .header_new-open-section .header_new-open-list {
+    height: calc(100% - 4em);
+    padding-top: 0;
+    padding-bottom: .5em;
+    margin-top: 1.5em;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .header_new-open-bot .header_new-open-section:last-child .header_new-open-list {
+    border-right: none;
+  }
   .header_new-open .header_new-social {
     padding: 0;
     text-align: right;
