@@ -1,6 +1,6 @@
 .header_new-topline {
 	background-color: $dark-violet;
-	padding: .875em;
+	padding: 0.58em 1em;
 	font-size: .875em;
 	overflow: hidden;
 	line-height: 1.43;
@@ -11,7 +11,7 @@
 		padding: 0;
 	}
 	.is-menu-show & {
-		padding: .875em;
+		padding: 0.58em 1em;
 		height: auto;
 		visibility: visible;
 	}
@@ -34,7 +34,7 @@
 			}
 		}
 		li + li {
-			margin-left: 14px;
+			margin-left: .6em;
 		}
 	}
 	&-support {
@@ -74,7 +74,8 @@
 		font-size: 1em;
 		margin-left: 1.25em;
 		svg {
-			width: 1.2em;
+			margin-top: .1em;
+			max-width: 1.6em;
 		}
 	}
 }
@@ -160,7 +161,7 @@
 	svg,
 	img {
 		vertical-align: middle;
-		width: 1.2em;
+		max-width: 1.5em;
 	}
 	&-grid {
 		display: inline;
@@ -195,7 +196,7 @@
 
 
 .header_new-top {
-	padding: 1em;
+	padding: 0.5em 0.7em;
 	background-color: $main-violet;
 	&-content {
 		// max-width: $header-width;
@@ -227,7 +228,7 @@
 			}
 		}
 		img {
-			max-height: 34px;
+			max-height: 2.5em;
 		}
 	}
 }

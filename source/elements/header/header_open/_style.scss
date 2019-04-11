@@ -2,15 +2,14 @@
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	top: 113px;
+	top: 95px;
 	bottom: 0;
-	// display: none;
 	left: 0;
 	width: 100%;
 	z-index: 9;
 	background-color: $main-violet;
 	transition: all .3s ease;
-	padding: 1.5em .8em;
+	padding: 0 .8em;
 	overflow: auto;
 	transition: all .3s ease;
 	visibility: hidden;
@@ -23,7 +22,7 @@
 	}
 	@include min-screen($tablet) {
 		& {
-			padding: 1.5em;
+			padding: 1.4em 1.5em;
 			top: 0 !important;
 		}
 	}
@@ -37,12 +36,15 @@
 		display: none;
 		flex-direction: row;
 		flex-wrap: wrap;
-		padding-bottom: 2em;
+		padding-bottom: 1.8em;
 	}
 	&-item {
 		flex: 1;
-		margin-bottom: 0.85em;
+		margin-bottom: 0.7em;
 		line-height: 1.6em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		img,
 		svg {
 			max-width: 1.5em;
@@ -51,13 +53,13 @@
 			margin-right: .5em;
 		}
 		&.is_big_item {
-			margin-bottom: 1.5em;
+			margin-bottom: 1em;
 			padding-bottom: 1em;
 			border-bottom: 1px solid rgba($white, .2);
 		}
 		&-image {
 			float: left;
-			margin-right: 0.7em;
+			margin-right: 0.4em;
 			img,
 			svg {
 				max-height: 3em;
@@ -106,7 +108,7 @@
 				display: inline-block;
 				img,
 				svg {
-					width: 1em;
+					max-width: 2em;
 				}
 			}
 		}
@@ -126,24 +128,22 @@
 		@include min-screen($tablet) {
 			& {
 				flex-direction: row;
-				flex: 1;
 				padding: 0 1em;
 				white-space: nowrap;
-				justify-content: space-around;
 			}
 		}
 	}
 	&-topline &-item {
 		@include min-screen($tablet) {
 			& {
-					padding: 0 .2em;
+					padding: 0 0.8em;
 					flex: none;
 					margin-bottom: .5em;
 			}
 		}
 	}
 	&-bot &-list {
-		padding-top: 1.5em;
+		padding-top: 1em;
 		@include min-screen($tablet) {
 			& {
 				display: block !important;
@@ -171,7 +171,7 @@
 				@include arr(8, 6, $white, b);
 				content: '';
 				position: absolute;
-				right: .5em;
+				right: 0.5em;
 				top: 50%;
 				margin-top: -3px;
 				transition: all .4s linear;
@@ -224,10 +224,12 @@
 		}
 	}
 	&-bot &-link {
-		white-space: normal;
+		@include min-screen($tablet) {
+			white-space: normal;
+		}
 	}
 	.header_new-social {
-		padding: 3em 0;
+		padding:0 0 3.1em 0;
 		text-align: center;
 		@include min-screen($tablet) {
 			& {
@@ -235,7 +237,9 @@
 				text-align: right;
 			}
 		}
+
 	}
+
 	&-middle {
 		order: -1;
 		display: flex;
@@ -243,12 +247,12 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		padding: 1.5em 0 2em;
+		padding: .8em 0 1.9em;
 		@include min-screen($tablet) {
 			& {
 				justify-content: space-between;
 				order: 0;
-				padding: 1.5em 0 3em;
+				padding: 0.9em 0 2.9em;
 			}
 		}
 	}
@@ -288,7 +292,8 @@
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
-		min-width: 21em;
+		min-width: 18em;
+		width: 50%;
 		height: 3em;
 		padding: .5em 1.5em;
 		border-radius: 1.5em;

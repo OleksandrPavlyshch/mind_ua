@@ -42,7 +42,7 @@ $header-height-mobile: 96px;
 			display: inline-block;
 			vertical-align: middle;
 			& + & {
-				margin-left: 1.2em;
+				margin-left: 1.5em;
 			}
 		}
 		&-link {
@@ -51,6 +51,24 @@ $header-height-mobile: 96px;
 			min-width: 1em;
 			&:hover {
 				color: $pink;
+			}
+			svg {
+				min-width: 1em;
+			}
+			&.is_facebook svg {
+				width: 1.2em;
+			}
+			&.is_twitter {
+				margin-left: 0.3em;
+				svg {
+					width: 1.4em;
+				}
+			}
+			&.is_telegram svg {
+				width: 1.5em;
+			}
+			&.is_youtube svg {
+				width: 1.6em;
 			}
 		}
 	}
