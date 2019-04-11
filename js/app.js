@@ -114,7 +114,6 @@ $(function(){
 	menuCollapsToDorpdown($botMenuList, $botMenuDropdawn, $botMenuDropdawnButton);
 	menuCollapsToDorpdown($topMenuList, $topMenuDropdawn, $topMenuDropdawnButton);
 });
-
 $(function(){
 	var $body = $('body')
 		, $menuButton = $('.header_new-menu_button');
@@ -127,6 +126,7 @@ $(function(){
 		$body.removeClass('is-menu-show');
 	});
 });
+
 $(function(){
 	var $body = $('body')
 		, $menuButton = $('.header_new-menu_button')
