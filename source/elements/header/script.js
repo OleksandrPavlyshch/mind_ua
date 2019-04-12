@@ -62,7 +62,7 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 		});
 
 		$menuItems
-			.slice(lastItemIndex, $menuItems.length ).hide()
+			.slice(lastItemIndex, $menuItems.length - 1 ).hide()
 			.end()
 			.slice(0, lastItemIndex ).show();
 
