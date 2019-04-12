@@ -187,10 +187,16 @@
   *zoom: 1;
   color: inherit;
   min-width: 1em;
+  max-height: 1.2em;
+  overflow: hidden;
 }
 
 .header_new-bot .header_new-social-link:hover {
   color: #d9265e;
+}
+
+.header_new-bot .header_new-social-link svg {
+  max-height: 1.1em;
 }
 
 .header_new-bot .header_new-social-link.is_facebook svg {
