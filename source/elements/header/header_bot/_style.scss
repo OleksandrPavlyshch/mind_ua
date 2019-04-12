@@ -93,6 +93,7 @@
 	}
 	&-middle {
 		flex: 1;
+		max-width: calc(100% - 17em);
 		&-top {
 			display: flex;
 			flex-direction: row;
@@ -102,7 +103,6 @@
 		}
 		&-bot {
 			position: relative;
-			// transition: all .3s ease;
 		}
 	}
 	&-menu {
@@ -111,7 +111,9 @@
 		display: flex;
 		justify-content: space-between;
 		white-space: nowrap;
-		// margin-right: 2em;
+		@include min-screen(1680) {
+			justify-content: flex-start;
+		}
 		&-item {
 			color: rgba($white, .8);
 			display: inline-block;
