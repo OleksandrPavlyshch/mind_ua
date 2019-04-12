@@ -1,6 +1,6 @@
 .header_new-bot {
 	display: none;
-	padding: 1.5em;
+	padding: .8em 1.8em 1em;
 	color: $white;
 	align-items: center;
 	justify-content: space-between;
@@ -17,9 +17,9 @@
 		font-size: .9em;
 		display: inline-block;
 		cursor: pointer;
-		padding: 1.3em;
+		padding: 1.1em 1em;
 		border-radius: 1.8em;
-		margin-left: 2em;
+		margin-left: 2.4em;
 		background-color: $pink;
 		white-space: nowrap;
 		&:hover {
@@ -29,12 +29,13 @@
 	}
 	&-logo {
 		max-width: 7em;
-		margin-right: .6em;
+		padding-top: .4em;
+		margin-right: 1.8em;
 	}
 	&-language {
 		float: left;
 		list-style: none;
-		font-size: .8em;
+		// font-size: .8em;
 		a {
 			color: inherit;
 		}
@@ -47,22 +48,56 @@
 			}
 		}
 		li + li {
-			margin-left: 1.2em;
+			margin-left: 0.2em;
+		}
+	}
+	.header_new-social-item + .header_new-social-item {
+		margin-left: 0.9em;
+	}
+	.header_new-social {
+		padding-top: 0.4em;
+		list-style: none;
+		color: $white;
+		&-item {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&-link {
+			display: inline-block;
+			color: inherit;
+			min-width: 1em;
+			&:hover {
+				color: $pink;
+			}
+			&.is_facebook svg {
+				width: 0.9em;
+			}
+			&.is_twitter {
+				margin-left: 0.2em;
+				svg {
+					width: 1.1em;
+				}
+			}
+			&.is_telegram svg {
+				width: 1.2em;
+			}
+			&.is_youtube svg {
+				width: 1.1em;
+			}
 		}
 	}
 	&-middle {
 		flex: 1;
-		max-width: calc(100% - 23em);
 		&-top {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			padding-bottom: 1em;
+			padding-bottom: 0.8em;
 		}
 		&-bot {
 			position: relative;
-			transition: all .3s ease;
+			// transition: all .3s ease;
 		}
 	}
 	&-menu {
@@ -98,21 +133,25 @@
 		&-dropdown {
 			display: none;
 			position: absolute;
+			min-width: 12.8em;
 			z-index: 7;
 			top: 50%;
 			left: 100%;
 			margin-top: 1em;
 			margin-left: -3em;
-			padding: 1.5em;
+			padding: 0.2em 1.6em 1.1em;
 			background-color: $main-violet;
 			border-radius: 0 0 .5em .5em;
 		}
 		&-dropdown &-item {
 			padding: 0;
 			white-space: nowrap;
-			margin-bottom: .3em;
+			// margin-bottom: .3em;
 			display: block;
 			line-height: 1.4em;
+			margin-top: 0.9em;
+		}
+		&-dropdown &-item + &-item {
 		}
 		&-dropdown &-item img,
 		&-dropdown &-item &-image {

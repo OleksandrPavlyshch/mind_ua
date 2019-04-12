@@ -72,7 +72,7 @@
 	}
 	&-login_button {
 		font-size: 1em;
-		margin-left: 1.25em;
+		margin-left: 1em;
 		svg {
 			margin-top: .1em;
 			max-width: 1.6em;
@@ -85,11 +85,11 @@
 	justify-content: flex-end;
 	float: right;
 	min-height: 1.25em;
-	padding: .5em .8em .5em 1em;
+	padding: .4em 0.45em .6em 1em;
 	border-radius: 1em;
 	background-color: $main-violet;
 	transition: all .3s ease;
-	width: 8.5em;
+	width: 8.1em;
 	&.is_focused {
 		background-color: $white;
 		width: 100%;
@@ -124,7 +124,7 @@
 		display: inline-block;
 		svg, 
 		img {
-			width: 1.2em;
+			max-width: 1.5em;
 		}
 		.is_focused & {
 			color: rgba($nobel, 0.6);
@@ -276,7 +276,7 @@
 			display: none;
 			position: absolute;
 			white-space: normal;
-			padding: 1.2em 1.5em;
+			padding: 1.3em 1.5em;
 			z-index: 7;
 			top: 90%;
 			left: 100%;
@@ -341,10 +341,10 @@
 			position: absolute;
 			top: 50%;
 			left: 100%;
-			min-width: 12.5em;
+			min-width: 12.9em;
 			margin-top: 1em;
 			margin-left: -3em;
-			padding: 1.1em 1.5em;
+			padding: 0.7em 1.5em 0.4em;
 			background-color: $dark-violet;
 			border-radius: 0 0 .5em .5em;
 		}
@@ -354,7 +354,7 @@
 			white-space: nowrap;
 			display: block;
 			line-height: 1.4em;
-			margin-bottom: 0.6em;
+			margin-bottom: 0.9em;
 		}
 		&-dropdown_button {
 			float: right;
