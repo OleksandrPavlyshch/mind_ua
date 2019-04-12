@@ -59,7 +59,7 @@
 
 	&-rss_button {
 		display: none;
-		width: 1em;
+		// width: 1em;
 		img,
 		svg {
 			width: inherit;
@@ -147,7 +147,7 @@
 
 .header_new-menu_button {
 	font-size: 1em;
-	margin-right: 1.5em;
+	margin-right: 1.9em;
 	border: none;
 	outline: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -216,7 +216,7 @@
 	@include min-screen($tablet) {
 		& {
 			background-color: $dark-violet;
-			padding: 1em 1.5em;
+			padding: 0.4em 1.5em;
 		}
 	}
 
@@ -238,8 +238,8 @@
 	&-sub_menu {
 		display: none;
 		position: relative;
-		min-height: 2em;
-		line-height: 2em;
+		min-height: 1.9em;
+		line-height: 1.9em;
 		border-left: 1px solid rgba($white, .15);
 		padding-left: 1.5em;
 		// margin-left: 0.3em;
@@ -247,6 +247,7 @@
 
 		@include min-screen($tablet) {
 			& {
+				margin-right: auto;
 				display: block;
 			}
 		}
@@ -320,7 +321,8 @@
 		}
 	}
 	&-main_menu {
-		padding-left: 2em;
+		padding-left: 1.8em;
+		margin-left: 1.6em;
 		flex: 1;
 		max-width: calc(100% - 42em);
 		&-list {
@@ -329,6 +331,9 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 			// margin-right: 1.3em;
+		}
+		&-item + &-item {
+			padding-left: 1.1em;
 		}
 		&-dropdown {
 			display: none;
