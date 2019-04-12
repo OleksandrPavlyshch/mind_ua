@@ -891,6 +891,14 @@
   justify-content: center;
 }
 
+.header_new-top-content-left {
+  max-width: 5.2em;
+}
+
+.header_new-top-content-right {
+  max-width: 18.5em;
+}
+
 .header_new-top-logo {
   display: inline-block;
   *display: inline;
@@ -934,6 +942,11 @@
 
 .header_new-top-main_menu-link, .header_new-top-sub_menu-link {
   font-size: .8em;
+}
+
+.header_new-top-sub_menu {
+  margin-right: 1.5em;
+  padding-right: 1em;
 }
 
 .header_new-top-sub_menu-dropdown {
