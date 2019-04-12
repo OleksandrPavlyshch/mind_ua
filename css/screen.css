@@ -716,6 +716,9 @@
 
 .header_new-rss_button {
   display: none;
+  max-width: 1.5em;
+  max-height: 1.5em;
+  overflow: hidden;
 }
 
 .header_new-rss_button img,
@@ -899,6 +902,10 @@
   max-width: 18.5em;
 }
 
+.header_new-top-content-middle {
+  display: none;
+}
+
 .header_new-top-logo {
   display: inline-block;
   *display: inline;
@@ -945,7 +952,7 @@
 }
 
 .header_new-top-sub_menu {
-  margin-right: 1.5em;
+  margin-left: 1.5em;
   padding-right: 1em;
 }
 
@@ -1017,7 +1024,6 @@
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  max-width: calc(100% - 42em);
 }
 
 .header_new-top-main_menu-list {
@@ -1254,6 +1260,18 @@
   .is-menu-show .header_new-menu_button-arrow {
     display: inline;
   }
+  .header_new-top-content-middle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
   .header_new-top {
     background-color: #100926;
     padding: 0.4em 1.5em;
@@ -1262,7 +1280,6 @@
     display: none;
   }
   .header_new-top-main_menu, .header_new-top-sub_menu {
-    margin-right: auto;
     display: block;
   }
 }
