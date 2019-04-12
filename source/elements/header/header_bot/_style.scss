@@ -66,8 +66,13 @@
 			display: inline-block;
 			color: inherit;
 			min-width: 1em;
+			max-height: 1.2em;
+			overflow: hidden;
 			&:hover {
 				color: $pink;
+			}
+			svg {
+				max-height: 1.1em;
 			}
 			&.is_facebook svg {
 				width: 0.9em;
