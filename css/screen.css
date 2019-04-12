@@ -223,6 +223,7 @@
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  max-width: calc(100% - 17em);
 }
 
 .header_new-bot-middle-top {
@@ -1281,6 +1282,14 @@
   }
   .header_new-top-main_menu, .header_new-top-sub_menu {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .header_new-bot-menu {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
