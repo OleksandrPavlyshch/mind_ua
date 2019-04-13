@@ -1285,7 +1285,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    max-width: calc(100vw - 24em);
+    max-width: calc(100vw - 26em);
   }
   .header_new-top {
     background-color: #100926;
@@ -1301,7 +1301,7 @@
 
 @media screen and (min-width: 1025px) and (-ms-high-contrast: active) {
   .header_new-top-content-middle {
-    max-width: calc(100vw - 24em);
+    max-width: calc(100vw - 26em);
   }
 }
 
