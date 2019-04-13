@@ -52,17 +52,23 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 
 		$menuItems.each(function(index) {
 
-			var itemWidth = $(this).outerWidth();
-			visibleItemsWidth += itemWidth;
+			if(index < $menuItems.length - 1) {
+				var itemWidth = $(this).outerWidth();
+				visibleItemsWidth += itemWidth;
+			}
+
 
 			if(visibleItemsWidth + 15 > wraperWidth) {
 				lastItemIndex = index;
+				$menuList.parent().removeClass('all-items-visible')
 				return false;
 			}
+
+			$menuList.parent().addClass('all-items-visible')
 		});
 
 		$menuItems
-			.slice(lastItemIndex, $menuItems.length ).hide()
+			.slice(lastItemIndex, $menuItems.length - 1 ).hide()
 			.end()
 			.slice(0, lastItemIndex ).show();
 
