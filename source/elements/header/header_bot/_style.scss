@@ -106,13 +106,13 @@
 		}
 	}
 	&-menu {
-		// text-overflow: ellipsis;
 		display: flex;
 		white-space: nowrap;
 		&-item {
 			color: rgba($white, .8);
 			display: inline-block;
 			position: relative;
+			line-height: 1.3em;
 			&.active,
 			&:hover {
 				color: $white;
@@ -132,6 +132,7 @@
 			max-width: 1.2em;
 			vertical-align: middle;
 			margin-right: .25em;
+			max-height: 1.5em;
 		}
 		&-dropdown {
 			display: none;
@@ -149,7 +150,6 @@
 		&-dropdown &-item {
 			padding: 0;
 			white-space: nowrap;
-			// margin-bottom: .3em;
 			display: block;
 			line-height: 1.4em;
 			margin-top: 0.9em;
@@ -168,7 +168,7 @@
 			display: none;
 			width: 1em;
 			min-width: 1.5em;
-			height: 1em;
+			height: 1.3em;
 			position: relative;
 			text-indent: 9999px;
 			transition: inherit;

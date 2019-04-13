@@ -202,13 +202,11 @@
 	padding: 0.5em 0.7em;
 	background-color: $main-violet;
 	&-content {
-		// max-width: $header-width;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		// justify-content: center;
 		&-left,
 		&-right {
 			display: flex;
@@ -224,9 +222,11 @@
 		&-middle {
 			display: none;
 			@include min-screen($tablet) {
+				margin-right: auto;
 				display: flex;
 				flex: 1;
 				flex-direction: row;
+				max-width: calc(100% - 24em)
 			}
 		}
 	}
@@ -259,12 +259,10 @@
 		line-height: 1.9em;
 		border-left: 1px solid rgba($white, .15);
 		padding-left: 1.5em;
-		// margin-left: 0.3em;
 		transition: all .3s ease;
 
 		@include min-screen($tablet) {
 			& {
-				// margin-right: auto;
 				display: block;
 			}
 		}
@@ -343,14 +341,16 @@
 		padding-left: 1.8em;
 		margin-left: 1.6em;
 		flex: 1;
-		// max-width: calc(100% - 42em);
-		// max-width: calc(100% - 42em);
+		max-width: calc(100% - 14em);
+		&.all-items-visible {
+			flex: none;
+			width: auto;
+		}
 		&-list {
 			display: flex;
-			justify-content: space-between;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			// margin-right: 1.3em;
+		}
+		&-item {
+			position: relative;
 		}
 		&-item + &-item {
 			padding-left: 1.1em;
@@ -379,7 +379,6 @@
 		&-dropdown_button {
 			float: right;
 			display: none;
-			margin-left: 1.3em;
 			width: 1.5em;
 			min-width: 1.5em;
 			height: 2em;
