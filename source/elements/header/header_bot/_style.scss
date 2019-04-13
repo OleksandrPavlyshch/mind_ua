@@ -94,6 +94,11 @@
 	&-middle {
 		flex: 1;
 		max-width: calc(100% - 21em);
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			& {
+				max-width: calc(100vw - 21em);
+			}
+		}
 		&-top {
 			display: flex;
 			flex-direction: row;

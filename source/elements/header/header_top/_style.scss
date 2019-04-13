@@ -226,7 +226,12 @@
 				display: flex;
 				flex: 1;
 				flex-direction: row;
-				max-width: calc(100% - 24em)
+				max-width: calc(100vw - 24em);
+				@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+					& {
+						max-width: calc(100vw - 24em);
+					}
+				}
 			}
 		}
 	}
