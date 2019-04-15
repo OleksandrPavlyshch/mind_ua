@@ -368,7 +368,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  top: 95px;
+  top: 94px;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -481,6 +481,7 @@
   display: block;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  font-size: 1em;
 }
 
 .header_new-open-topline .header_new-open-item {
@@ -509,7 +510,7 @@
   position: relative;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.3);
-  font-size: .9em;
+  font-size: .85em;
 }
 
 .header_new-open-section_header:before {
