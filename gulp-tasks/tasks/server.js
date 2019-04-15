@@ -25,7 +25,7 @@ gulp.task('server', () => {
 			, scroll: true
 		}
 		, online: true
-		// , tunnel: 'public'
+		, tunnel: 'public'
 	});
 });
 

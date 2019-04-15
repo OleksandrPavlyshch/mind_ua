@@ -15,6 +15,7 @@
 	visibility: hidden;
 	opacity: 0;
 	transform: translateY(-2em);
+	z-index: 11;
 	.is-menu-show &{
 		transform: translateY(0);
 		opacity: 1;
@@ -114,10 +115,10 @@
 		}
 	}
 	&-topline {
-		display: flex;
-		align-items: flex-start;
 		@include min-screen($tablet) {
 			& {
+				align-items: flex-start;
+				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 			}
@@ -234,7 +235,7 @@
 		}
 	}
 	.header_new-social {
-		padding:0 0 3.1em 0;
+		padding: 2em 0 3.1em 0;
 		text-align: center;
 		@include min-screen($tablet) {
 			& {
@@ -247,14 +248,13 @@
 
 	&-middle {
 		order: -1;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
 		align-items: center;
 		text-align: center;
 		padding: .8em 0 1.9em;
 		@include min-screen($tablet) {
 			& {
+				display: flex;
+				flex-direction: row;
 				justify-content: space-between;
 				order: 0;
 				padding: 0.8em 0 2.85em;
@@ -296,6 +296,7 @@
 	&-search {
 		align-items: center;
 		display: flex;
+		margin: 0 auto;
 		justify-content: space-between;
 		min-width: 18em;
 		width: 50%;
