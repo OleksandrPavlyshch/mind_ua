@@ -2,7 +2,7 @@
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	top: 95px;
+	top: 94px;
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -92,6 +92,7 @@
 		overflow: hidden;
 		display: block;
 		text-overflow: ellipsis;
+		font-size: 1em;
 	}
 	&-topline &-item {
 		min-width: 50%;
@@ -167,7 +168,7 @@
 			position: relative;
 			font-weight: 700;
 			color: rgba($white, 0.3);
-			font-size: .9em;
+			font-size: .85em;
 			&::before {
 				@include arr(8, 6, $white, b);
 				content: '';
