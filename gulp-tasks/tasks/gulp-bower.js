@@ -9,7 +9,7 @@ const gulp = require('gulp')
 	, configs = require('../configs');
 
 gulp.task('bower', () => {
-	runSequence('install-bower-packeges', 'vendor-js', 'vendor-css', 'wiredep');
+	runSequence(/*'install-bower-packeges',*/ 'vendor-js', 'vendor-css', /*'wiredep'*/);
 });
 
 // install bower packeges
