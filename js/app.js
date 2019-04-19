@@ -57,7 +57,6 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 				visibleItemsWidth += itemWidth;
 			}
 
-
 			if(visibleItemsWidth + 15 > wraperWidth) {
 				lastItemIndex = index;
 				$menuList.parent().removeClass('all-items-visible')
@@ -84,6 +83,8 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 		}
 		$dropdawnButton.show();
 	};
+
+	$menuList.removeClass('is_no_js_dot_menu');
 
 	collapseMenuItems()
 
@@ -121,6 +122,18 @@ $(function(){
 	menuCollapsToDorpdown($topMenuList, $topMenuDropdawn, $topMenuDropdawnButton);
 });
 
+$(function(){
+	var $body = $('body')
+		, $menuButton = $('.header_new-menu_button');
+	$('.header_new-open-section_header').click(function(event) {
+		$(this).toggleClass('is_open')
+		.next('.header_new-open-list').slideToggle();
+	});
+	$('.header_new-open-button_close').on('click', function() {
+		$menuButton.removeClass('active');
+		$body.removeClass('is-menu-show');
+	});
+});
 $(function(){
 	var $body = $('body')
 		, $menuButton = $('.header_new-menu_button')
@@ -176,16 +189,4 @@ $(function(){
 		}
 	});
 
-});
-$(function(){
-	var $body = $('body')
-		, $menuButton = $('.header_new-menu_button');
-	$('.header_new-open-section_header').click(function(event) {
-		$(this).toggleClass('is_open')
-		.next('.header_new-open-list').slideToggle();
-	});
-	$('.header_new-open-button_close').on('click', function() {
-		$menuButton.removeClass('active');
-		$body.removeClass('is-menu-show');
-	});
 });
