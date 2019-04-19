@@ -33,10 +33,16 @@
 	&-middle{
 		flex: 1;
 		max-width: calc(100% - 28.5em);
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			& {
+				max-width: calc(100vw - 29.5em);
+			}
+		}
 	}
 	&-logo {
 		img {
 			max-height: 1.5em;
+			max-width: 3.25em;
 		}
 	}
 	.header_new-menu_button {
@@ -52,11 +58,6 @@
 		flex: 1;
 		white-space: nowrap;
 		display: flex;
-		@include min-screen(1600) {
-			& {
-				flex: none;
-			}
-		}
 		&-image {
 			max-width: 1.6em;
 			vertical-align: middle;
