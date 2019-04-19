@@ -112,12 +112,17 @@ $(function(){
 	var $topMenuList = $('.header_new-top-main_menu-list');
 	var $topMenuDropdawn = $('.header_new-top-main_menu-dropdown');
 	var $topMenuDropdawnButton = $('.header_new-top-main_menu-dropdown_button');
-	
+
 	var $botMenuList = $('.header_new-bot-menu');
 	var $botMenuDropdawn = $('.header_new-bot-menu-dropdown');
 	var $botMenuDropdawnButton = $('.header_new-bot-menu-dropdown_button');
+
+	var $stickyMenuList = $('.header_new_sticky-menu');
+	var $stickyMenuDropdawn = $('.header_new_sticky-menu-dropdown');
+	var $stickyMenuDropdawnButton = $('.header_new_sticky-menu-dropdown_button');
 	
 	initHeader();
 	menuCollapsToDorpdown($botMenuList, $botMenuDropdawn, $botMenuDropdawnButton);
 	menuCollapsToDorpdown($topMenuList, $topMenuDropdawn, $topMenuDropdawnButton);
+	menuCollapsToDorpdown($stickyMenuList, $stickyMenuDropdawn, $stickyMenuDropdawnButton);
 });

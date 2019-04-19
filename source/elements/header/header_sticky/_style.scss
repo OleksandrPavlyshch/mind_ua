@@ -1,3 +1,139 @@
 .header_new_sticky {
 	background-color: $dark-violet;
+	flex-direction: row;
+	padding: 0.4em 1.5em;
+	// display: none;
+	visibility: hidden;
+	display: flex;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	align-items: center;
+	@include min-screen($tablet) {
+		.is-fixed & {
+			visibility: visible;
+		}
+	}
+	&-left,
+	&-right {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&-left {
+		max-width: 6.7em;
+		margin-right: 1.5em;
+	}
+	&-right {
+		max-width: 18.5em;
+		margin-left: auto;
+	}
+	&-middle{
+		flex: 1;
+		max-width: calc(100% - 28.5em);
+	}
+	&-logo {
+		img {
+			max-height: 1.5em;
+		}
+	}
+	.header_new-menu_button {
+		margin-right: 1.3em;
+	}
+	&-menu{
+		position: relative;
+		min-height: 1.9em;
+		line-height: 1.9em;
+		border-left: 1px solid rgba($white, .15);
+		transition: all .3s ease;
+		padding-left: 1.5em;
+		flex: 1;
+		white-space: nowrap;
+		display: flex;
+		@include min-screen(1600) {
+			& {
+				flex: none;
+			}
+		}
+		&-image {
+			max-width: 1.6em;
+			vertical-align: middle;
+			margin-right: .25em;
+			max-height: 1.8em;
+		}
+		&.all-items-visible {
+			flex: none;
+			width: auto;
+		}
+		&-item {
+			color: rgba($white, .6);
+			display: inline-block;
+			&.active,
+			&:hover {
+				color: $white;
+			}
+			& + & {
+				padding-left: 1.2em;
+			}
+		}
+		&-dropdown {
+			display: none;
+			z-index: 7;
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			min-width: 12.9em;
+			margin-top: 1em;
+			margin-left: -3em;
+			padding: 0.7em 1.5em 0.4em;
+			background-color: $dark-violet;
+			border-radius: 0 0 .5em .5em;
+		}
+		&-dropdown &-item {
+			padding: 0;
+			white-space: nowrap;
+			display: block;
+			line-height: 1.4em;
+			margin-bottom: 0.9em;
+		}
+		&-dropdown_button {
+			float: right;
+			display: none;
+			width: 1.5em;
+			min-width: 1.5em;
+			height: 2em;
+			display: inline-block;
+			position: relative;
+			overflow: hidden;
+			text-indent: 9999px;
+			transition: inherit;
+			cursor: pointer;
+			opacity: .6;
+			&:hover,
+			&.active {
+				opacity: 1;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				border-radius: 50%;
+				color: $white;
+				background-color: currentColor;
+				width: .25em;
+				height: .25em;
+				box-shadow: -.5em 0, .5em 0;
+			}
+		}
+		&-link {
+			color: inherit;
+			cursor: pointer;
+			transition: inherit;
+			display: inline-block;
+			
+		}
+	}
 }
