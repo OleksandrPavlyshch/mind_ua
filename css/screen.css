@@ -105,7 +105,7 @@
 
 .header_new-bot {
   display: none;
-  padding: .8em 1.8em 1em;
+  padding: .8em 1.5em 1em;
   color: #ffffff;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -722,12 +722,30 @@
 }
 
 .header_new-login_button {
-  font-size: 1em;
-  margin-left: 1em;
+  border-radius: 50%;
+  margin-left: .75em;
+  width: 2.25em;
+  min-width: 2.25em;
+  height: 2.25em;
+  overflow: hidden;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header_new-login_button-image {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
 }
 
 .header_new-login_button svg {
-  margin-top: .1em;
   max-width: 1.6em;
 }
 
@@ -747,7 +765,7 @@
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
-  width: 8.1em;
+  width: 7.5em;
 }
 
 .header_new-search.is_focused {
@@ -1130,6 +1148,9 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .is-fixed .header_new-bot {
+    display: none;
+  }
   .header_new-open {
     padding: 1.4em 1.5em;
     top: 0 !important;
@@ -1278,6 +1299,13 @@
   .is-menu-show .header_new-menu_button-arrow {
     display: inline;
   }
+  .header_new-top {
+    background-color: #100926;
+    padding: 0.4em 1.5em;
+  }
+  .is-fixed .header_new-top {
+    display: none;
+  }
   .header_new-top-content-middle {
     margin-right: auto;
     display: -webkit-box;
@@ -1291,10 +1319,6 @@
     -ms-flex-direction: row;
     flex-direction: row;
     max-width: calc(100vw - 27em);
-  }
-  .header_new-top {
-    background-color: #100926;
-    padding: 0.4em 1.5em;
   }
   .header_new-top-logo {
     display: none;
