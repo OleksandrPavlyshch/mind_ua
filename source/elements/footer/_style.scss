@@ -4,6 +4,7 @@
 		max-width: 1320px;
 		min-width: 320px;
 		padding: 0 20px;
+		margin: 0 auto;
 	}
 	&-top {
 		display: flex;
@@ -17,6 +18,61 @@
 		img {
 			max-height: 1.5em;
 			max-width: 3.25em;
+		}
+	}
+	&-language {
+		float: left;
+		list-style: none;
+		font-size: .9em;
+		li {
+			display: inline-block;
+			color: $pink;
+		}
+		li + li {
+			margin-left: 0.9em;
+		}
+		a {
+			color: #gray;
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+	&-bredcrums {
+		list-style: none;
+		flex: 1;
+		margin: 0 2em;
+		padding: 0.8em 2em;
+		align-items: center;
+		min-height: 3em;
+		color: $pink;
+		border-left: 1px solid $nobel;
+		&-item {
+			display: inline-block;
+			line-height: 1.4em;
+			font-size: .8em;
+		}
+		&-link {
+			position: relative;
+			padding-right: 1.4em;
+			margin-right: .8em;
+			color: $charcoal;
+			display: inline-block;
+			&:hover {
+				color: inherit;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -.4em;
+				width: .8em;
+				height: .8em;
+				border: 1px solid $nobel;
+				border-width: 1px 1px 0 0;
+				transform: rotate(45deg);
+			}
 		}
 	}
 }
