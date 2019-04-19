@@ -216,9 +216,10 @@
 			background-color: $dark-violet;
 			padding: 0.4em 1.5em;
 		}
-		.is-fixed & {
-			display: none;
-		
+		.is-scroll & {
+			visibility: hidden;
+			height: 0;
+			padding: 0;
 		}
 	}
 	&-content {

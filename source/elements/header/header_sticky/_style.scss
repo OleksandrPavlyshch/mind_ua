@@ -12,7 +12,7 @@
 	width: 100%;
 	align-items: center;
 	@include min-screen($tablet) {
-		.is-fixed & {
+		.is-scroll & {
 			visibility: visible;
 		}
 	}

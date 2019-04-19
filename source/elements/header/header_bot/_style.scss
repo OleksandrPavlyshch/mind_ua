@@ -12,8 +12,10 @@
 		}
 	}
 	@include min-screen($tablet) {
-		.is-fixed & {
-			display: none;
+		.is-scroll & {
+			visibility: hidden;
+			height: 0;
+			padding: 0;
 		}
 	}
 	&-support {
