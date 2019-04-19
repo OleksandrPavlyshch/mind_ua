@@ -43,19 +43,18 @@
 		float: left;
 		list-style: none;
 		font-size: .8em;
-		a {
-			color: inherit;
-		}
 		li {
 			display: inline-block;
-			color: rgba($white, 0.6);
-			&.active,
-			&:hover {
-				color: $white;
-			}
+			color: $white;
 		}
 		li + li {
 			margin-left: 0.7em;
+		}
+		a {
+			color: rgba($white, 0.6);
+			&:hover {
+				color: $white;
+			}
 		}
 	}
 	.header_new-social-item + .header_new-social-item {

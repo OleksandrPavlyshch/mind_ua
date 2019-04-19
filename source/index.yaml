@@ -7,3 +7,5 @@ PageList:
   ready: 100
 - file: header_disable_button.html
   ready: 100
+- file: footer.html
+  ready: 100

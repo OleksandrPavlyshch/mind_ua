@@ -23,18 +23,18 @@
 	&-language {
 		float: left;
 		list-style: none;
-		a {
-			color: inherit;
-		}
 		li {
+			color: $white;
 			display: inline-block;
+		}
+		li + li {
+			margin-left: .6em;
+		}
+		a {
 			color: rgba($white, 0.6);
 			&.active {
 				color: $white;
 			}
-		}
-		li + li {
-			margin-left: .6em;
 		}
 	}
 	&-support {
