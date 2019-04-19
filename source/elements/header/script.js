@@ -57,7 +57,6 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 				visibleItemsWidth += itemWidth;
 			}
 
-
 			if(visibleItemsWidth + 15 > wraperWidth) {
 				lastItemIndex = index;
 				$menuList.parent().removeClass('all-items-visible')
@@ -84,6 +83,8 @@ var menuCollapsToDorpdown = function($menuList, $dropdawn, $dropdawnButton) {
 		}
 		$dropdawnButton.show();
 	};
+
+	$menuList.removeClass('is_no_js_dot_menu');
 
 	collapseMenuItems()
 

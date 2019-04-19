@@ -226,7 +226,7 @@
 				display: flex;
 				flex: 1;
 				flex-direction: row;
-				max-width: calc(100vw - 26em);
+				max-width: calc(100vw - 27em);
 				@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 					& {
 						max-width: calc(100vw - 26em);
@@ -346,7 +346,12 @@
 		padding-left: 1.8em;
 		margin-left: 1.6em;
 		flex: 1;
-		max-width: calc(100% - 14em);
+		max-width: calc(100% - 15em);
+		@include min-screen(1600) {
+			& {
+				flex: none;
+			}
+		}
 		&.all-items-visible {
 			flex: none;
 			width: auto;
