@@ -1324,8 +1324,10 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .is-fixed .header_new-bot {
-    display: none;
+  .is-scroll .header_new-bot {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
   }
   .header_new-open {
     padding: 1.4em 1.5em;
@@ -1450,7 +1452,7 @@
   .header_new-open-search {
     min-width: 38em;
   }
-  .is-fixed .header_new_sticky {
+  .is-scroll .header_new_sticky {
     visibility: visible;
   }
   .header_new-topline {
@@ -1482,8 +1484,10 @@
     background-color: #100926;
     padding: 0.4em 1.5em;
   }
-  .is-fixed .header_new-top {
-    display: none;
+  .is-scroll .header_new-top {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
   }
   .header_new-top-content-middle {
     margin-right: auto;
