@@ -690,6 +690,7 @@
 
 .header_new_sticky-logo img {
   max-height: 1.5em;
+  max-width: 3.25em;
 }
 
 .header_new_sticky .header_new-menu_button {
@@ -1306,6 +1307,9 @@
   .header_new-bot-middle {
     max-width: calc(100vw - 21em);
   }
+  .header_new_sticky-middle {
+    max-width: calc(100vw - 28.5em);
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -1510,11 +1514,6 @@
 }
 
 @media screen and (min-width: 1600px) {
-  .header_new_sticky-menu {
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
-  }
   .header_new-top-main_menu {
     -webkit-box-flex: 0;
     -ms-flex: none;
