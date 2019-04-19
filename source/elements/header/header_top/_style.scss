@@ -74,10 +74,21 @@
 		}
 	}
 	&-login_button {
-		font-size: 1em;
-		margin-left: 1em;
+		border-radius: 50%;
+		margin-left: .75em;
+		width: 2.25em;
+		min-width: 2.25em;
+		height: 2.25em;
+		overflow: hidden;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		&-image{
+			max-width: 100%;
+			max-height: 100%;
+			vertical-align: middle;
+		}
 		svg {
-			margin-top: .1em;
 			max-width: 1.6em;
 		}
 	}
@@ -92,7 +103,7 @@
 	border-radius: 1em;
 	background-color: $main-violet;
 	transition: all .3s ease;
-	width: 8.1em;
+	width: 7.5em;
 	&.is_focused {
 		background-color: $white;
 		width: 100%;
@@ -201,6 +212,16 @@
 .header_new-top {
 	padding: 0.5em 0.7em;
 	background-color: $main-violet;
+	@include min-screen($tablet) {
+		& {
+			background-color: $dark-violet;
+			padding: 0.4em 1.5em;
+		}
+		.is-fixed & {
+			display: none;
+		
+		}
+	}
 	&-content {
 		margin: 0 auto;
 		display: flex;
@@ -235,12 +256,7 @@
 			}
 		}
 	}
-	@include min-screen($tablet) {
-		& {
-			background-color: $dark-violet;
-			padding: 0.4em 1.5em;
-		}
-	}
+
 
 	&-logo {
 		display: inline-block;

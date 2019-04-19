@@ -1,6 +1,6 @@
 .header_new-bot {
 	display: none;
-	padding: .8em 1.8em 1em;
+	padding: .8em 1.5em 1em;
 	color: $white;
 	align-items: center;
 	justify-content: space-between;
@@ -9,6 +9,11 @@
 	@include min-screen($tablet) {
 		& {
 				display: flex;
+		}
+	}
+	@include min-screen($tablet) {
+		.is-fixed & {
+			display: none;
 		}
 	}
 	&-support {

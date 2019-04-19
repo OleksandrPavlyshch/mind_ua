@@ -1,7 +1,18 @@
+---
+title: Header disabled button
+---
+
+{% extends "nunjucks-templates/layouts/_layout.html" %}
+
+{% block content %}
 <div class="header_new" id="header">
 	<div class="header_new-i">
 		{% include "elements/header/header_top/index.html" %}
 		{% include "elements/header/header_bot/index.html" %}
+		{% include "elements/header/header_sticky/index.html" %}
 	</div>
 	{% include "elements/header/header_open/index.html" %}
 </div>
+<div style="height: 300vh;"></div>
+	
+{% endblock %}

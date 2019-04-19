@@ -16,9 +16,7 @@
   {% if page_class %}<body class="{{ page_class }}">{% else %}<body>{% endif %}
 
     <!-- BEGIN content -->
-    <main class="content">
-        {% block content %}{% endblock %}
-    </main>
+    {% block content %}{% endblock %}
     <!-- END content -->
 
     <!-- BEGIN scripts -->
