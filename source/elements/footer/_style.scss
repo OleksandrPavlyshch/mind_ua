@@ -110,6 +110,10 @@
 		&:hover {
 			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 		}
+		@include min-screen($tablet) {
+			bottom: 7em;
+			right: 0;
+		}
 	}
 	&-bot {
 		text-align: center;
@@ -120,6 +124,7 @@
 		position: relative;
 		@include min-screen($tablet) {
 			flex-direction: row;
+			padding: 2em 0;
 		}
 		&-menu {
 			flex: 1;
@@ -195,6 +200,10 @@
 			order: -1;
 			@include min-screen($tablet) {
 				order: 1;
+				display: flex;
+				flex-direction: row;
+				border-bottom: 1px solid #dedede;
+				padding-bottom: 1em;
 
 			}
 		}
@@ -318,6 +327,10 @@
 			font-weight: 700;
 			color: $nobel;
 			font-size: .85em;
+			@include min-screen($tablet) {
+				font-size: 1em;
+
+			}
 			&::before {
 				@include arr(8, 6, $nobel, b);
 				content: '';
@@ -330,6 +343,24 @@
 			&.is_open::before{
 				transform: rotateX(180deg);
 				@include arr(8, 6, $pink, b);
+			}
+		}
+		@include min-screen($tablet) {
+			& {
+				flex-basis: 22.8%;
+				max-width: 22.8%;
+			}
+			& + & {
+				margin-left: 2.25em;
+			}
+			&.is_wide_section {
+				flex-basis: 48.5%;
+				max-width: 48.5%;
+			}
+			&_header {
+				&::before {
+					display: none;
+				}
 			}
 		}
 	}
@@ -345,6 +376,12 @@
 		flex-wrap: wrap;
 		padding-bottom: 1.8em;
 		padding-top: 1em;
+		@include min-screen($tablet) {
+			& {
+				font-size: .85em;
+				display: block !important;
+			}
+		}	
 		&-item {
 			flex: 1;
 			margin-bottom: 0.7em;
@@ -354,8 +391,8 @@
 			text-overflow: ellipsis;
 			img,
 			svg {
-				max-width: 1.5em;
-				max-height: 1.5em;
+				max-width: 1.4em;
+				max-height: 1.4em;
 				vertical-align: middle;
 				margin-right: .5em;
 			}
