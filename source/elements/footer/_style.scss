@@ -9,15 +9,28 @@
 	&-top {
 		display: flex;
 		flex-direction: row;
-		border-bottom: 1px solid #dedede;
-		padding: .75em 0;
-		justify-content: space-between;
+		padding: 1.5em 0;
+		margin-bottom: 1em;
 		align-items: center;
+		justify-content: center;
+		@include min-screen($tablet) {
+			& {
+				justify-content: space-between;
+				padding: .75em 0;
+				border-bottom: 1px solid #dedede;
+			}
+		}
 	}
 	&-logo {
+		display: none;
 		img {
 			max-height: 1.5em;
 			max-width: 3.25em;
+		}
+		@include min-screen($tablet) {
+			& {
+				display: block;
+			}
 		}
 	}
 	&-language {
@@ -39,6 +52,7 @@
 		}
 	}
 	&-bredcrums {
+		display: none;
 		list-style: none;
 		flex: 1;
 		margin: 0 2em;
@@ -46,7 +60,12 @@
 		align-items: center;
 		min-height: 3em;
 		color: $pink;
-		border-left: 1px solid $nobel;
+		border-left: 1px solid #dedede;
+		@include min-screen($tablet) {
+			& {
+				display: block;
+			}
+		}
 		&-item {
 			display: inline-block;
 			line-height: 1.4em;
@@ -75,4 +94,189 @@
 			}
 		}
 	}
+	&-bot {
+		text-align: center;
+		padding: 1.5em 0 6em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include min-screen($tablet) {
+			flex-direction: row;
+		}
+		&-menu {
+			flex: 1;
+			line-height: 2em;
+			font-size: .9em;
+			padding-left: 1em;
+			order: -1;
+			@include min-screen($tablet) {
+				& {
+					order: 1;
+					text-align: right;
+				}
+			}
+			&-item {
+				@include min-screen($tablet) {
+					& {
+						display: inline-block;
+					}
+					& + & {
+						margin-left: 1em;
+					}
+				}
+			}
+			&-link {
+				@include min-screen($tablet) {
+					color: #666666;
+					&:hover {
+						color: $pink;
+					}
+				}
+			}
+		}
+	}
+	&-copy {
+		font-size: .8em;
+		color: $nobel;
+		white-space: nowrap;
+		margin-top: 1.5em;
+		@include min-screen($tablet) {
+			margin-top: 0;
+		}
+		&-item {
+			display: inline-block;
+			padding: 0 .5em;
+			line-height: 1.1em;
+			& + & {
+				border-left: 1px solid $nobel;
+			}
+		}
+		&-link {
+			color: inherit;
+		}
+	}
+	&-middle {
+		&-top {
+			padding-top: 2em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			order: -1;
+			@include min-screen($tablet) {
+				& {
+					padding: 3em 0;
+					flex-direction: row;
+					justify-content: space-between;
+					order: 1;
+				}
+			}
+		}
+	}
+	&-social {
+		list-style: none;
+		color: $white;
+		padding: 3em 0 1.5em;
+		@include min-screen($tablet) {
+			padding: 0;
+		}
+		&-item {
+			display: inline-block;
+			vertical-align: middle;
+			& + & {
+				margin-left: 1.5em;
+			}
+		}
+		&-link {
+			display: inline-block;
+			color: inherit;
+			min-width: 1em;
+			color: $gray;
+			&:hover {
+				color: $pink;
+			}
+			&.is_facebook svg {
+				width: 1.2em;
+			}
+			&.is_twitter {
+				margin-left: 0.3em;
+				svg {
+					width: 1.4em;
+				}
+			}
+			&.is_telegram svg {
+				width: 1.5em;
+			}
+			&.is_youtube svg {
+				width: 1.6em;
+			}
+		}
+	}
+	&-search {
+		align-items: center;
+		margin: 0 auto;
+		justify-content: space-between;
+		width: 50%;
+		height: 3em;
+		padding: .5em 1.5em;
+		border-radius: 1.5em;
+		background-color: $main-violet;
+		transition: all .3s ease;
+		background-color: $white;
+		display: none;
+		@include min-screen($tablet) {
+			& {
+				display: flex;
+				min-width: 38em;
+			}
+		}
+		&-input {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			font-size: 1em;
+			color: rgba($nobel, 0.6);
+			margin-right: .5em;
+			flex: 1;
+			height: 2em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: calc(100% - 3em);
+		}
+		&-button {
+			min-width: 1.125em;
+			width: 1.125em;
+			height: 2em;
+			font-size: 1em;
+			padding: 0;
+			color: #ccc;
+			cursor: pointer;
+			background: none;
+			transition: inherit;
+			border: none;
+		}
+	}
+	&-support {
+		transition: all .3s ease;
+		color: $white;
+		font-size: .9em;
+		cursor: pointer;
+		padding: 1.1em;
+		border-radius: 1.8em;
+		margin-left: .5em;
+		box-sizing: border-box;
+		background-color: $pink;
+		white-space: nowrap;
+		border: 1px solid $pink;
+		order: -1;
+
+		&:hover {
+			background-color: $white;
+			color: $pink;
+		}
+		@include min-screen($tablet) {
+			order: 0;
+		}
+	}
+
 }
