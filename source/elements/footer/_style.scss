@@ -94,12 +94,30 @@
 			}
 		}
 	}
+	&-arrow_up {
+		position: absolute;
+		bottom: 1.5em;
+		right: 1.5em;
+		width: 3em;
+		height: 3em;
+		background-color: $white;
+		border-radius: 50%;
+		box-sizing: border-box;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+		padding: .7em;
+		color: $nobel;
+		cursor: pointer;
+		&:hover {
+			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+		}
+	}
 	&-bot {
 		text-align: center;
-		padding: 1.5em 0 6em;
+		padding: 1.5em 0 7em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
 		@include min-screen($tablet) {
 			flex-direction: row;
 		}
@@ -107,10 +125,10 @@
 			flex: 1;
 			line-height: 2em;
 			font-size: .9em;
-			padding-left: 1em;
 			order: -1;
 			@include min-screen($tablet) {
 				& {
+					padding-left: 1em;
 					order: 1;
 					text-align: right;
 				}
@@ -235,7 +253,7 @@
 			border: none;
 			outline: none;
 			font-size: 1em;
-			color: rgba($nobel, 0.6);
+			color: $gray;
 			margin-right: .5em;
 			flex: 1;
 			height: 2em;
