@@ -2,6 +2,10 @@ $(function(){
 	$('.footer_new-arrow_up').click(function() {
 		$('html, body').animate({ scrollTop: 0 });
 	});
+	$('.footer_new-section_header').click(function(event) {
+		$(this).toggleClass('is_open')
+		.next('.footer_new-list').slideToggle();
+	});
 })
 
 var initHeader = function() {
@@ -131,7 +135,6 @@ $(function(){
 	menuCollapsToDorpdown($topMenuList, $topMenuDropdawn, $topMenuDropdawnButton);
 	menuCollapsToDorpdown($stickyMenuList, $stickyMenuDropdawn, $stickyMenuDropdawnButton);
 });
-
 $(function(){
 	var $body = $('body')
 		, $menuButton = $('.header_new-menu_button');
@@ -144,6 +147,7 @@ $(function(){
 		$body.removeClass('is-menu-show');
 	});
 });
+
 
 $(function(){
 	var $body = $('body')
