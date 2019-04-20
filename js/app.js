@@ -1,4 +1,5 @@
 
+
 var initHeader = function() {
 	$header = $('#header');
 	$(window).scroll(function() {
