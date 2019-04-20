@@ -175,20 +175,27 @@
 		}
 	}
 	&-middle {
+		display: flex;
+		flex-direction: column;
 		&-top {
 			padding-top: 2em;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			order: -1;
 			@include min-screen($tablet) {
 				& {
 					padding: 3em 0;
 					flex-direction: row;
 					justify-content: space-between;
-					order: 1;
 				}
+			}
+		}
+		&-bot {
+			order: -1;
+			@include min-screen($tablet) {
+				order: 1;
+
 			}
 		}
 	}
@@ -337,6 +344,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		padding-bottom: 1.8em;
+		padding-top: 1em;
 		&-item {
 			flex: 1;
 			margin-bottom: 0.7em;
@@ -357,6 +365,19 @@
 				float: left;
 				padding-right: 1em;
 			}
+			.is_two_colums-mobile & {
+				width: 50%;
+				max-width: 50%;
+				float: left;
+				padding-right: 1em;
+				@include min-screen($tablet) {
+					float: none;
+					padding-right: 0;
+					max-width: none;
+					width: auto;
+				}
+			}
+
 		}
 		&-link {
 			color: inherit;
