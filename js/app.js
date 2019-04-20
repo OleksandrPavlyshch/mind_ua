@@ -155,6 +155,7 @@ $(function(){
 		$body.removeClass('is-menu-show');
 	});
 });
+
 $(function(){
 	var $body = $('body')
 		, $menuButton = $('.header_new-menu_button')
