@@ -1,5 +1,5 @@
 .footer_new {
-	background: #eeecf3;
+	background-color: #f3f3f3;
 	&-content {
 		max-width: 1320px;
 		min-width: 320px;
@@ -163,10 +163,11 @@
 		}
 		&-item {
 			display: inline-block;
-			padding: 0 .5em;
+			padding-right: .5em;
 			line-height: 1.1em;
 			& + & {
 				border-left: 1px solid $nobel;
+				padding-left: .5em;
 			}
 		}
 		&-link {
@@ -205,6 +206,9 @@
 				margin-left: 1.5em;
 			}
 		}
+		svg {
+			max-height: 1.2em;
+		}
 		&-link {
 			display: inline-block;
 			color: inherit;
@@ -242,6 +246,7 @@
 		transition: all .3s ease;
 		background-color: $white;
 		display: none;
+		border: solid 1px #dedede;
 		@include min-screen($tablet) {
 			& {
 				display: flex;
@@ -297,4 +302,72 @@
 		}
 	}
 
+	&-section {
+		&_header {
+			padding: 1em 0 1.1em;
+			border-top: 3px solid #cccccc;
+			border-bottom: 1px solid #cccccc;
+			position: relative;
+			font-weight: 700;
+			color: $nobel;
+			font-size: .85em;
+			&::before {
+				@include arr(8, 6, $nobel, b);
+				content: '';
+				position: absolute;
+				right: 0.5em;
+				top: 50%;
+				margin-top: -3px;
+				transition: all .4s linear;
+			}
+			&.is_open::before{
+				transform: rotateX(180deg);
+				@include arr(8, 6, $pink, b);
+			}
+		}
+	}
+	&-list {
+		list-style: none;
+		color: $charcoal;
+		font-size: 1em;
+		box-sizing: border-box;
+		display: block;
+		overflow: hidden;
+		display: none;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-bottom: 1.8em;
+		&-item {
+			flex: 1;
+			margin-bottom: 0.7em;
+			line-height: 1.6em;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			img,
+			svg {
+				max-width: 1.5em;
+				max-height: 1.5em;
+				vertical-align: middle;
+				margin-right: .5em;
+			}
+			.is_two_colums & {
+				width: 50%;
+				max-width: 50%;
+				float: left;
+				padding-right: 1em;
+			}
+		}
+		&-link {
+			color: inherit;
+			white-space: nowrap;
+			overflow: hidden;
+			display: block;
+			text-overflow: ellipsis;
+			font-size: 1em;
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
 }
