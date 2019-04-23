@@ -324,6 +324,9 @@
 			border-radius: .25em;
 			background-color: $white;
 			box-shadow: 0 0 49px 0 rgba($black, 0.15);
+			& & {
+				display: none;
+			}
 		}
 		&-item {
 			position: relative;
@@ -393,6 +396,9 @@
 			padding: 0.7em 1.5em 0.4em;
 			background-color: $dark-violet;
 			border-radius: 0 0 .5em .5em;
+			& & {
+				display: none;
+			}
 		}
 		&-dropdown &-item {
 			padding: 0;
