@@ -160,9 +160,11 @@
 		}
 	}
 	&-counters {
-		padding: 2em 0 0;
+		padding: 2em 0;
+		text-align: center;
 		@include min-screen($tablet) {
-			padding: 0 1em;
+			text-align: right;
+			padding: 1em 0 2em;
 		}
 	}
 	&-copy {
