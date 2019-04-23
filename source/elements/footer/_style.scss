@@ -125,10 +125,10 @@
 		@include min-screen($tablet) {
 			flex-direction: row;
 			padding: 2em 0;
+			justify-content: space-between;
 		}
 		&-menu {
-			flex: 1;
-			line-height: 2em;
+			line-height: 1.4em;
 			font-size: .9em;
 			order: -1;
 			@include min-screen($tablet) {
@@ -156,6 +156,12 @@
 					}
 				}
 			}
+		}
+	}
+	&-counters {
+		padding: 2em 0 0;
+		@include min-screen($tablet) {
+			padding: 0 1em;
 		}
 	}
 	&-copy {
@@ -389,6 +395,11 @@
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			@include min-screen($tablet) {
+				white-space: normal;
+				overflow: visible;
+				padding-right: 4em;
+			}
 			img,
 			svg {
 				max-width: 1.4em;
@@ -423,8 +434,14 @@
 			display: block;
 			text-overflow: ellipsis;
 			font-size: 1em;
-			&:hover {
-				color: $pink;
+			@include min-screen($tablet) {
+				& {
+					white-space: normal;
+					overflow: visible;
+				}
+				&:hover {
+					color: $pink;
+				}
 			}
 		}
 	}
