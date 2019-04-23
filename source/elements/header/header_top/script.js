@@ -21,7 +21,14 @@ $(function(){
 		$searchForm.removeClass(focusClass);
 	});
 
-	//Sub menu dropdawn
+	$(document).keyup(function(e) {
+		 if (e.key === "Escape" && e.keyCode == 27) {
+			$menuButton.removeClass('active');
+			$body.removeClass(menuShowClass);
+		}
+	});
+
+	//Sub menu dropdown
 
 	$subMenuTitle.click(function(e) {
 		var act = $(this).hasClass(openClass);
