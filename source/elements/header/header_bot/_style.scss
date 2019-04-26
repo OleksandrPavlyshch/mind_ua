@@ -5,17 +5,12 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: row;
+	position: relative;
+	z-index: 2;
 	background-color: $main-violet;
 	@include min-screen($tablet) {
 		& {
 				display: flex;
-		}
-	}
-	@include min-screen($tablet) {
-		.is-scroll & {
-			visibility: hidden;
-			height: 0;
-			padding: 0;
 		}
 	}
 	&-support {

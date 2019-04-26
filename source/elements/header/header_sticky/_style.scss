@@ -1,19 +1,24 @@
+$sticky_header_height: 49px;
 .header_new_sticky {
 	background-color: $dark-violet;
 	flex-direction: row;
 	padding: 0.4em 1.5em;
-	// display: none;
-	visibility: hidden;
 	display: flex;
-	position: absolute;
-	z-index: 2;
+	position: fixed;
+	z-index: 1;
 	top: 0;
 	left: 0;
 	width: 100%;
+	opacity: 0;
 	align-items: center;
+	transform: translateY(-$sticky_header_height);
+	transition: transform .3s ease-in-out;
 	@include min-screen($tablet) {
 		.is-scroll & {
-			visibility: visible;
+			opacity: 1;
+		}
+		.is-fixed & {
+			transform: translateY(0);
 		}
 	}
 	&-left,

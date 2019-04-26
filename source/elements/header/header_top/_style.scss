@@ -4,11 +4,14 @@
 	font-size: .875em;
 	overflow: hidden;
 	line-height: 1.43;
+	position: relative;
+	z-index: 2;
 	transition: all .3s ease;
 	.is-scroll & {
 		overflow: hidden;
 		height: 0;
-		padding: 0;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 	.is-menu-show & {
 		padding: 0.58em 1em;
@@ -211,15 +214,12 @@
 .header_new-top {
 	padding: 0.5em 0.7em;
 	background-color: $main-violet;
+	position: relative;
+	z-index: 2;
 	@include min-screen($tablet) {
 		& {
 			background-color: $dark-violet;
 			padding: 0.4em 1.5em;
-		}
-		.is-scroll & {
-			visibility: hidden;
-			height: 0;
-			padding: 0;
 		}
 	}
 	&-content {
