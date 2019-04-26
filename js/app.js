@@ -139,6 +139,7 @@ $(function(){
 	menuCollapsToDorpdown($stickyMenuList, $stickyMenuDropdawn, $stickyMenuDropdawnButton);
 });
 
+
 $(function(){
 	var $body = $('body')
 		, $menuButton = $('.header_new-menu_button');
@@ -155,7 +156,6 @@ $(function(){
 		$body.removeClass('is-menu-show');
 	});
 });
-
 $(function(){
 	var $body = $('body')
 		, $menuButton = $('.header_new-menu_button')
@@ -179,7 +179,14 @@ $(function(){
 		$searchForm.removeClass(focusClass);
 	});
 
-	//Sub menu dropdawn
+	$(document).keyup(function(e) {
+		 if (e.key === "Escape" && e.keyCode == 27) {
+			$menuButton.removeClass('active');
+			$body.removeClass(menuShowClass);
+		}
+	});
+
+	//Sub menu dropdown
 
 	$subMenuTitle.click(function(e) {
 		var act = $(this).hasClass(openClass);
