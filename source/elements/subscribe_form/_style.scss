@@ -8,27 +8,45 @@
         font-weight: 500;
         line-height: 1.33;
         color: $black;
-        margin-bottom: 1.1em;
+        margin-bottom: 1em;
 
         &-highlite {
             color: $pink;
+            text-decoration: none;
         }
     }
 
     &-form {
-
-
-        // background-color: $white;
         display: flex;
-        // overflow: hidden;
-        transition: all .3s ease;
+        transition: all .3s linear;
+        position: relative;
+        padding: 2px;
+        margin: -2px;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 1.5em;
 
+        &.is_sending {
+            width: 3.1em;
+            // animation-name: rotateSubscribeButton;
+            // animation-duration: 1.5s;
+            // animation-delay: .5s;
+            // animation-fill-mode: none;
+
+            // animation-timing-function: linear;
+            // animation-iteration-count: infinite;
+        }
+
+        &.is_sended {
+            width: 100%;
+        }
     }
 
     &-email {
         transition: inherit;
         border: solid 1px #e1dee5;
-        padding: .8em 2.5em .8em 1.5em;
+        padding: .7em 2.5em .8em 1.5em;
         flex: 1;
         font-size: 1em;
         border-radius: 1.5em;
@@ -61,6 +79,11 @@
         padding: 0;
         outline: none;
 
+        svg {
+            margin-top: 3px;
+            margin-left: -3px;
+        }
+
         .is_focus & {
             color: $main-violet;
         }
@@ -68,5 +91,101 @@
         .is_error & {
             color: $pink;
         }
+    }
+
+    &-message {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $main-violet;
+        color: $white;
+        border-radius: 1.5em;
+        overflow: hidden;
+        font-size: 1em;
+        line-height: 1.25;
+        padding: .8em 1.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: inherit;
+        opacity: 0;
+        visibility: hidden;
+
+        &.visible_state {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .is_sending &,
+        .is_sended & {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        &-text {
+            flex: 1;
+            line-height: 1.25;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-close {
+            max-height: 1.5em;
+            width: 1.5em;
+            cursor: pointer;
+            color: $white;
+            transition: inherit;
+
+            svg {
+                transition: inherit;
+            }
+
+            @include min-screen($tablet) {
+                &:hover {
+                    color: $pink;
+                }
+            }
+        }
+
+        &-close_icon {
+            display: none;
+            max-height: 1.5em;
+
+            .is_sended &{
+                display: block;
+            }
+        }
+
+        &-load_icon {
+            display: none;
+            max-height: 1.5em;
+            animation-name: rotateSubscribeButtonIcon;
+            animation-duration: 1.5s;
+            animation-delay: .5s;
+            animation-fill-mode: none;
+
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            .is_sending & {
+                display: block;
+            }
+        }
+    }
+
+
+}
+
+@keyframes rotateSubscribeButtonIcon {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
     }
 }

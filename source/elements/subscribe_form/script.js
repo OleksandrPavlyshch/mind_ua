@@ -4,13 +4,63 @@ $(function () {
         return re.test(String(email).toLowerCase());
         
     }
+    
     var $subscribeForm = $('#subscribe_form'),
         $subscribeFormInput = $subscribeForm.find('.subscribe-email'),
+        $subscribeCloseMessageIcon = $subscribeForm.find('.subscribe-message-close_icon'),
+        $subscribeMessageText = $subscribeForm.find('.subscribe-message-text');
         subscribeFocusClass = 'is_focus',
-        subscribeErrorClass = 'is_error';
+        subscribeErrorClass = 'is_error',
+        subscribeSendingClass = 'is_sending',
+        subscribeSendedClass = 'is_sended',
+        subscribeURL = 'https://mind.ua/ajax/subscription';
+
+    var sendSubscribeRequest = function (data) {
+        return $.ajax({
+            url: subscribeURL,
+            type: 'POST',
+            data: data,
+            contentType: 'text/plain',
+            scriptAttrs: 'crossorigin'
+        });
+    }
     
     $subscribeForm.submit(function(e) {
         e.preventDefault();
+        
+        console.log(validateEmail($subscribeFormInput.val()));
+
+        if (validateEmail($subscribeFormInput.val())){
+            var data = $(this).serialize();
+            $subscribeForm.addClass(subscribeSendingClass);
+            sendSubscribeRequest(data)
+                .done(
+                    function(){
+                        setTimeout(function () {
+                            $subscribeMessageText.text('Вам надіслано листа для підтвердження');
+                            $subscribeForm
+                                .addClass(subscribeSendedClass)
+                                .removeClass(subscribeSendingClass);
+                        }, 1500);
+                    }
+                )
+                .fail(
+                    function () {
+                        setTimeout(function () {
+                            console.log('fail');
+                            
+                            $subscribeMessageText.text('Щось пішло не так!!!');
+                            $subscribeForm
+                                .addClass(subscribeSendedClass)
+                                .removeClass(subscribeSendingClass);
+                        }, 1500);
+                    }
+                );
+        }
+    });
+
+    $subscribeCloseMessageIcon.click(function() {
+        $subscribeForm.removeClass(subscribeSendedClass);
     });
 
     $subscribeFormInput.on('input', function (e) {
