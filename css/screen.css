@@ -1845,6 +1845,7 @@
   line-height: 1.35;
   outline: none;
   color: #333333;
+  max-width: 100%;
 }
 
 .subscribe-email::-webkit-input-placeholder {
