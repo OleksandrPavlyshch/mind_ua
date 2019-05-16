@@ -5,7 +5,7 @@
 
     &-title {
         font-size: 1.13em;
-        font-weight: 500;
+        font-weight: 700;
         line-height: 1.33;
         color: $black;
         margin-bottom: 1em;
@@ -46,6 +46,7 @@
         line-height: 1.35;
         outline: none;
         color: $charcoal;
+        max-width: 100%;
 
         @include placeholder () {
             color: $nobel;
