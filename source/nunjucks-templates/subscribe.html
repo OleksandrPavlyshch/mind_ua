@@ -5,19 +5,5 @@ title: Header
 {% extends "nunjucks-templates/layouts/_layout.html" %}
 
 {% block content %}
-	<div class="header_new" id="header">
-		<div class="header_new-i">
-			{% include "elements/header/header_top/index.html" %}
-			{% include "elements/header/header_bot/index.html" %}
-			{% include "elements/header/header_sticky/index.html" %}
-		</div>
-		{% include "elements/header/header_open/index.html" %}
-	</div>
-	<div style="height: 300vh; background: repeating-linear-gradient(
-  45deg,
-  #606dbc,
-  #606dbc 50px,
-  #465298 50px,
-  #465298 100px
-);"></div>
+	{% include "elements/subscribe_form/index.html" %}
 {% endblock %}

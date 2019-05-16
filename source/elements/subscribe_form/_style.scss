@@ -1,0 +1,72 @@
+.subscribe {
+    background-color: #f3f0f8;
+    font-size: 16px;
+    padding: 1.4em 1.4em 2.3em;
+
+    &-title {
+        font-size: 1.13em;
+        font-weight: 500;
+        line-height: 1.33;
+        color: $black;
+        margin-bottom: 1.1em;
+
+        &-highlite {
+            color: $pink;
+        }
+    }
+
+    &-form {
+
+
+        // background-color: $white;
+        display: flex;
+        // overflow: hidden;
+        transition: all .3s ease;
+
+    }
+
+    &-email {
+        transition: inherit;
+        border: solid 1px #e1dee5;
+        padding: .8em 2.5em .8em 1.5em;
+        flex: 1;
+        font-size: 1em;
+        border-radius: 1.5em;
+        line-height: 1.35;
+        outline: none;
+        color: $charcoal;
+
+        @include placeholder () {
+            color: $nobel;
+        }
+
+        .is_focus & {
+            border-color: $main-violet;
+            box-shadow: 0 0 0 1px $main-violet;
+        }
+
+        .is_error & {
+            border-color: $pink;
+            box-shadow: 0 0 0 1px $pink;
+        }
+    }
+
+    &-submit {
+        border: none;
+        color: #afaab8;
+        background: none;
+        min-width: 2.5em;
+        font-size: 1em;
+        margin-left: -2.5em;
+        padding: 0;
+        outline: none;
+
+        .is_focus & {
+            color: $main-violet;
+        }
+
+        .is_error & {
+            color: $pink;
+        }
+    }
+}
