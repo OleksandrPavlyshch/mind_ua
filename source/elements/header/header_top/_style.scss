@@ -215,7 +215,7 @@
 	padding: 0.5em 0.7em;
 	background-color: $main-violet;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 	@include min-screen($tablet) {
 		& {
 			background-color: $dark-violet;
