@@ -1532,7 +1532,7 @@
   padding: 0.5em 0.7em;
   background-color: #211643;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header_new-top-content {
