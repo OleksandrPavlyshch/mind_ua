@@ -1,3 +1,7 @@
 .article-list-icon {
     color: $pink;
+    svg {
+        max-width: .8em;
+        max-height: .8em;
+    }
 }
