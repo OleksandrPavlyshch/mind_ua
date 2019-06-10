@@ -11,3 +11,7 @@ PageList:
   ready: 100
 - file: subscribe.html
   ready: 100
+- file: subscribe_content.html
+  ready: 100
+- file: subscribe-article-list.html
+  ready: 100
