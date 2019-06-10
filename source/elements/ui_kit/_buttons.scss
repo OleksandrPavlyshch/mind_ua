@@ -1,0 +1,37 @@
+.button {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: $main-violet;
+    border: none;
+    border-radius: 24px;
+    padding: 1.2em 1.8em;
+    line-height: 1;
+    transition: all .3s ease;
+    background-color: $light-gray;
+    min-width: 12em;
+
+    @include hover () {
+        background-color: darken($light-gray, 10%);
+    }
+
+    &.pink_button {
+        color: $white;
+        background-color: $pink;
+
+        @include hover () {
+            background-color: darken($pink, 10%);
+        }
+    }
+
+    &.main_violet_button {
+        color: $white;
+        background-color: $main-violet;
+
+        @include hover () {
+            background-color: lighten($main-violet, 10%);
+        }
+    }
+
+
+}
